@@ -4,7 +4,7 @@ import { Container, SectionTitle, Card } from '@/components/Blocks'
 
 export default function Page(){
   const companies = [
-    {name:'Ventrilo', blurb:'Voice‑native collaboration. $10M from a16z at $50M valuation after forming team & demo at Inception.'},
+    {name:'Ventrilo', blurb:'Voice‑native collaboration. $10M from a16z after forming team & demo at Inception.'},
     {name:'Mem0', blurb:'Cross-platform memory layer for LLMs. $20M Series A. 40K+ stars on GitHub.'},
     {name:'TextClub', blurb:'$200M+ ARR in 6 months at Playco. 20% conversion, 54% D1 retention. Pioneering $100B+ mobile gaming ecosystem.'},
     {name:'Coframe', blurb:'AI‑driven UX optimization. $9M from Khosla Ventures.'},

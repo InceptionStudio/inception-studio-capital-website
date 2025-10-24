@@ -128,7 +128,7 @@ export default function Home(){
             <div className="mt-10 grid md:grid-cols-3 gap-6">
               {[
                 {title:'Mem0', text:'$20M Series A. Cross-platform memory layer for LLMs. 40K+ stars on GitHub.'},
-                {title:'Ventrilo', text:'$10M from a16z at $50M valuation after forming team & demo at Inception.'},
+                {title:'Ventrilo', text:'$10M from a16z after forming team & demo at Inception.'},
                 {title:'Alex AI', text:'Acquired by OpenAI (Aug 2025).'},
               ].map((f,i)=> (
                 <Card key={i}><div className="p-6"><div className="font-semibold">{f.title}</div><p className="mt-2 text-neutral-300 text-sm">{f.text}</p></div></Card>
