@@ -58,7 +58,7 @@ export default function Home(){
                   <p>Every accelerator takes equity. The best founders have better options, so they don&apos;t participate. This creates adverse selection.</p>
                 </div>
                 <div>
-                  <p>We flipped the model. Zero equity means zero adverse selection. The best founders join Inception because there&apos;s no downside.</p>
+                  <p>We flipped the model. <strong>Zero equity means zero adverse selection.</strong> The best founders join Inception because there&apos;s no downside.</p>
                 </div>
                 <div>
                   <p><strong>Result:</strong> We see founders other investors never will. We invest before anyone else. We get the best terms.</p>
