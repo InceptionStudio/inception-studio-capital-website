@@ -13,13 +13,13 @@ pnpm dev # http://localhost:3000
 - Point DNS for **inceptionstudio.capital** to Vercel.  
 
 ## Forms
-- **/secure-allocation** → POST `/api/secure-allocation`
+- **/invest** → POST `/api/invest`
 - **/interest** → POST `/api/interest`
 - If `FORWARD_WEBHOOK_URL` is set, submissions are forwarded as JSON; otherwise we still return `{ ok: true }`.
 
 ## Pages
 - `/` (Home): hero, KPIs, thesis preview, portfolio preview, commit strip
-- `/secure-allocation` (primary CTA)
+- `/invest` (primary CTA)
 - `/interest` (secondary CTA)
 - `/thesis`, `/portfolio`, `/faq`, `/privacy`, `/legal`
 

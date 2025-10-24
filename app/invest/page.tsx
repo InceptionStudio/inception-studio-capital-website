@@ -12,7 +12,7 @@ export default function Page(){
     const payload = Object.fromEntries(fd.entries());
     setState({loading:true, ok:false, error:null});
     try{
-      const r = await fetch('/api/secure-allocation', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)});
+      const r = await fetch('/api/invest', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)});
       const js = await r.json();
       if(!r.ok || !js.ok) throw new Error(js.error || 'Request failed');
       setState({loading:false, ok:true, error:null});
@@ -27,7 +27,7 @@ export default function Page(){
       <main>
         <section className="py-16 md:py-24">
           <Container>
-            <SectionTitle eyebrow="Commit" title="Secure allocation (non‑binding)" subtitle="Tell us your target commitment and details. We’ll confirm availability and next steps. Allocations are limited."/>
+            <SectionTitle eyebrow="Commit" title="Invest with us" subtitle="Tell us your target commitment and details. We'll confirm availability and next steps. Allocations are limited."/>
             <div className="card">
               <form className="p-6 grid md:grid-cols-2 gap-6" onSubmit={onSubmit}>
                 <div>

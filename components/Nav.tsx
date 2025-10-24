@@ -16,7 +16,7 @@ export default function Nav(){
             <Link href="/thesis" className="hover:text-white/90">Thesis</Link>
             <Link href="/portfolio" className="hover:text-white/90">Portfolio</Link>
             <Link href="/faq" className="hover:text-white/90">FAQ</Link>
-            <Link href="/secure-allocation" className="btn btn-primary">Secure allocation</Link>
+            <Link href="/invest" className="btn btn-primary">Invest with us</Link>
           </nav>
           <button className="md:hidden inline-flex items-center p-2" onClick={()=>setOpen(v=>!v)} aria-label="Toggle Menu">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2"/></svg>
@@ -29,7 +29,7 @@ export default function Nav(){
             {[['Thesis','/thesis'],['Portfolio','/portfolio'],['FAQ','/faq']].map(([label, path])=> (
               <Link key={path} href={path} className="block py-1">{label}</Link>
             ))}
-            <Link href="/secure-allocation" className="btn btn-primary w-full justify-center">Secure allocation</Link>
+            <Link href="/invest" className="btn btn-primary w-full justify-center">Invest with us</Link>
           </div>
         </div>
       )}

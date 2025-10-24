@@ -22,7 +22,7 @@ export default function Home(){
                 </h1>
                 <p className="mt-4 text-neutral-300 max-w-xl">We built the Bay Area’s most selective zero‑equity founder community. Our $20M fund takes first‑money positions and follows winners—with privileged access others can’t get.</p>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <PrimaryCTA href="/secure-allocation">Secure allocation</PrimaryCTA>
+                  <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
                   <SecondaryCTA href="/interest">Register interest</SecondaryCTA>
                   <SecondaryCTA href="/faq">FAQ</SecondaryCTA>
                 </div>
@@ -100,7 +100,7 @@ export default function Home(){
                   <li className="flex gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-teal-300"></span><span><strong>Own the earliest allocation.</strong> $100k starters at formation, then $500k–$1.5M into validated winners, with MFN & pro‑rata.</span></li>
                 </ul>
                 <div className="pt-2 flex gap-3">
-                  <PrimaryCTA href="/secure-allocation">Secure allocation</PrimaryCTA>
+                  <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
                   <SecondaryCTA href="/thesis">Read the full thesis</SecondaryCTA>
                 </div>
               </div>

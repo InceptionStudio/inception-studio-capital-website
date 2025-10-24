@@ -36,7 +36,7 @@ pnpm lint
 - All pages follow the pattern: `<Nav/> → <main>sections</main> → <Footer/>`
 
 **Form submission flow:**
-1. Client-side forms POST to `/api/secure-allocation` or `/api/interest`
+1. Client-side forms POST to `/api/invest` or `/api/interest`
 2. API routes validate required fields (name, email, ±commitment)
 3. If `FORWARD_WEBHOOK_URL` env var is set, payload is forwarded as JSON
 4. Returns `{ ok: true }` or `{ ok: false, error: string }`
@@ -63,7 +63,7 @@ Designed for Vercel:
 ## Key Pages
 
 - `/` - Home (hero, KPIs, thesis, portfolio, commit CTA)
-- `/secure-allocation` - Primary CTA form (requires name, email, commitment amount)
+- `/invest` - Primary CTA form (requires name, email, commitment amount)
 - `/interest` - Secondary CTA form (lighter touch, just name/email/accreditation)
 - `/thesis`, `/portfolio`, `/faq` - Supporting content pages
 - `/privacy`, `/legal` - Compliance pages

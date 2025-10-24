@@ -25,7 +25,7 @@ export default function Page(){
                   <li>Disciplined pacing and reserves with strong governance.</li>
                 </ul>
                 <div className="mt-5 flex gap-3">
-                  <PrimaryCTA href="/secure-allocation">Secure allocation</PrimaryCTA>
+                  <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
                   <SecondaryCTA href="/interest">Register interest</SecondaryCTA>
                 </div>
               </div></Card>
