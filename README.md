@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Inception Studio Capital — Website (No Public Deck)
 
-## Getting Started
+Ready-to-deploy **Next.js (App Router) + Tailwind** site to drive LP FOMO and allocation requests.
 
-First, run the development server:
-
+## Quick start
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm i   # or npm i / yarn
+pnpm dev # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy
+- Vercel: import this repo → set `FORWARD_WEBHOOK_URL` in **Environment Variables** (optional, to forward form submissions).  
+- Point DNS for **inceptionstudio.capital** to Vercel.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Forms
+- **/secure-allocation** → POST `/api/secure-allocation`
+- **/interest** → POST `/api/interest`
+- If `FORWARD_WEBHOOK_URL` is set, submissions are forwarded as JSON; otherwise we still return `{ ok: true }`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Pages
+- `/` (Home): hero, KPIs, thesis preview, portfolio preview, commit strip
+- `/secure-allocation` (primary CTA)
+- `/interest` (secondary CTA)
+- `/thesis`, `/portfolio`, `/faq`, `/privacy`, `/legal`
 
-## Learn More
+## Styling
+- Dark, minimal, gradient accents aligned with inceptionstudio.org vibe.
+- Tailwind utility classes with small helpers in `globals.css`.
 
-To learn more about Next.js, take a look at the following resources:
+## Customize
+- Replace images (TODOs), add company logos, and verify metrics/wording per latest LP materials.
+- Wire `FORWARD_WEBHOOK_URL` to your CRM or a serverless function that emails and stores entries.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_Disclaimer: Informational only; not an offer to sell or solicitation to buy any security._
