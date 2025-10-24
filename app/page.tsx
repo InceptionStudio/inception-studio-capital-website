@@ -115,11 +115,11 @@ export default function Home(){
         <section className="py-16 md:py-24 border-t border-white/5" id="portfolio">
           <Container>
             <div className="flex items-end justify-between gap-6 flex-wrap">
-              <SectionTitle title="Selective portfolio, privileged access" subtitle="We invest at formation, then double‑down post‑traction."/>
+              <SectionTitle title="Selective portfolio, privileged access" subtitle="42 companies founded through Inception have raised $166M+ in follow-on funding."/>
               <SecondaryCTA href="/portfolio">See all companies</SecondaryCTA>
             </div>
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-              {['Ventrilo','Coframe','Alex AI','GuestOS','First Intelligence','TextClub'].map((name)=> (
+              {['Ventrilo','Mem0','TextClub','Coframe','GuestOS','Rmix','Greenflash','First Intelligence','Alex AI','Scorecard','Hyperscale','Axiom'].map((name)=> (
                 <div key={name} className="flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-4 py-6 text-sm text-neutral-300">
                   {name}
                 </div>
@@ -127,8 +127,8 @@ export default function Home(){
             </div>
             <div className="mt-10 grid md:grid-cols-3 gap-6">
               {[
+                {title:'Mem0', text:'$20M Series A. Cross-platform memory layer for LLMs. 40K+ stars on GitHub.'},
                 {title:'Ventrilo', text:'$10M from a16z at $50M valuation after forming team & demo at Inception.'},
-                {title:'Coframe', text:'$9M from Khosla Ventures; auto‑refines UX with AI.'},
                 {title:'Alex AI', text:'Acquired by OpenAI (Aug 2025).'},
               ].map((f,i)=> (
                 <Card key={i}><div className="p-6"><div className="font-semibold">{f.title}</div><p className="mt-2 text-neutral-300 text-sm">{f.text}</p></div></Card>
