@@ -45,12 +45,17 @@ export default function Home(){
           <Container>
             <div className="grid lg:grid-cols-3 gap-8">
               <SectionTitle title="Unfair access, measurable results" subtitle="Founder‑first funnel eliminates adverse selection. We build trust first, then invest—securing MFN & pro‑rata to follow breakouts."/>
-              <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+              <div className="lg:col-span-2 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
+                  {kpi:'235', label:'Founders participated'},
+                  {kpi:'19', label:'Cohort retreats'},
                   {kpi:'84', label:'Founder NPS'},
                   {kpi:'87%', label:'Founder‑to‑founder referrals'},
-                  {kpi:'32%', label:'with prior successful exits'},
-                  {kpi:'15+ yrs', label:'average industry experience'},
+                  {kpi:'82%', label:'Repeat founders'},
+                  {kpi:'32%', label:'Repeat founders with prior successful exit'},
+                  {kpi:'42', label:'Companies raised'},
+                  {kpi:'>$1.4B', label:'Raised in total'},
+                  {kpi:'15+ yrs', label:'Average industry experience'},
                 ].map((m, i)=> (
                   <Card key={i}>
                     <div className="p-6">

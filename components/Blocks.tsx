@@ -28,9 +28,9 @@ export function SectionTitle({ title, subtitle, eyebrow }:{title:string, subtitl
 }
 export function StatsRow(){
   const items = [
-    {icon: Users2, label:'219+ founders'},
-    {icon: ShieldCheck, label:'81% repeat founders'},
-    {icon: Rocket, label:'40 companies formed'},
+    {icon: Users2, label:'235 founders'},
+    {icon: ShieldCheck, label:'82% repeat founders'},
+    {icon: Rocket, label:'42 companies raised'},
     {icon: BarChart3, label:'$164M+ raised'}
   ]
   return (
