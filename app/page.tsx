@@ -64,6 +64,40 @@ export default function Home(){
           </Container>
         </section>
 
+        {/* OUR EDGE */}
+        <section className="py-16 md:py-24 border-t border-white/5 relative overflow-hidden">
+          <div className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-teal-500/5 blur-3xl"/>
+          </div>
+          <Container>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <p className="eyebrow justify-center">Our Edge</p>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">The Inception Advantage</h2>
+              <p className="mt-3 text-xl text-neutral-300">We&apos;ve cracked the code on attracting elite founders</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card>
+                <div className="p-8">
+                  <div className="text-lg font-bold text-teal-300 mb-3">No Adverse Selection</div>
+                  <p className="text-neutral-300 leading-relaxed">Every accelerator takes equity. The best founders have better options, so they don&apos;t participate. This creates adverse selection.</p>
+                </div>
+              </Card>
+              <Card>
+                <div className="p-8">
+                  <div className="text-lg font-bold text-teal-300 mb-3">Zero Equity = Zero Downside</div>
+                  <p className="text-neutral-300 leading-relaxed">We flipped the model. Zero equity means zero adverse selection. The best founders join Inception because there&apos;s no downside.</p>
+                </div>
+              </Card>
+              <Card>
+                <div className="p-8">
+                  <div className="text-lg font-bold text-teal-300 mb-3">Result: First Access, Best Terms</div>
+                  <p className="text-neutral-300 leading-relaxed">We see founders other investors never will. We invest before anyone else. We get the best terms.</p>
+                </div>
+              </Card>
+            </div>
+          </Container>
+        </section>
+
         {/* THESIS PREVIEW */}
         <section className="py-16 md:py-24" id="thesis">
           <Container>
