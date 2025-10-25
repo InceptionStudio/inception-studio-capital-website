@@ -92,7 +92,7 @@ export default function Home(){
           <Container>
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div className="space-y-4">
-                <SectionTitle title="Simple thesis, powerful edge"/>
+                <SectionTitle eyebrow="Our Thesis" title="Simple thesis, powerful edge"/>
                 <ul className="space-y-3 text-neutral-300">
                   <li className="flex gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-teal-300"></span><span><strong>Experienced founders win.</strong> They’re 1.6–2.0× likelier to produce outsized outcomes and raise more with less dilution.</span></li>
                   <li className="flex gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-teal-300"></span><span><strong>Zero‑equity top‑of‑funnel.</strong> Our 72‑hour retreats attract elite repeat founders who avoid traditional accelerators.</span></li>
