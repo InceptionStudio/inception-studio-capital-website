@@ -184,8 +184,8 @@ export default function Home(){
                   </div>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
                     <div>
-                      <div className="text-xs text-neutral-400">Valuation</div>
-                      <div className="text-sm font-semibold text-white mt-1">$50M</div>
+                      <div className="text-xs text-neutral-400">Raised</div>
+                      <div className="text-sm font-semibold text-white mt-1">$10M</div>
                     </div>
                     <div>
                       <div className="text-xs text-neutral-400">Lead Investor</div>
@@ -232,12 +232,12 @@ export default function Home(){
                   </div>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
                     <div>
-                      <div className="text-xs text-neutral-400">Valuation</div>
-                      <div className="text-sm font-semibold text-white mt-1">$40M</div>
+                      <div className="text-xs text-neutral-400">Raised</div>
+                      <div className="text-sm font-semibold text-white mt-1">$23M</div>
                     </div>
                     <div>
-                      <div className="text-xs text-neutral-400">TVPI</div>
-                      <div className="text-sm font-semibold text-white mt-1">2.29X</div>
+                      <div className="text-xs text-neutral-400">Founded</div>
+                      <div className="text-sm font-semibold text-white mt-1">2023</div>
                     </div>
                   </div>
                 </div>
@@ -275,13 +275,13 @@ export default function Home(){
                     <div className="text-sm text-neutral-400 mt-1">AI that remembers everything</div>
                   </div>
                   <div className="mb-4">
-                    <div className="text-sm font-semibold text-teal-300">Kelly Peng &amp; Bayley Wang</div>
+                    <div className="text-sm font-semibold text-teal-300">Kelly Peng</div>
                     <p className="text-sm text-neutral-300 mt-1">UC Berkeley EECS, MIT EECS, 15+ patents, Forbes 30u30</p>
                   </div>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
                     <div>
-                      <div className="text-xs text-neutral-400">TVPI</div>
-                      <div className="text-sm font-semibold text-white mt-1">2.00X</div>
+                      <div className="text-xs text-neutral-400">Patents</div>
+                      <div className="text-sm font-semibold text-white mt-1">15+</div>
                     </div>
                     <div>
                       <div className="text-xs text-neutral-400">Awards</div>
@@ -308,8 +308,8 @@ export default function Home(){
                       <div className="text-sm font-semibold text-white mt-1">10+</div>
                     </div>
                     <div>
-                      <div className="text-xs text-neutral-400">TVPI</div>
-                      <div className="text-sm font-semibold text-white mt-1">1.56X</div>
+                      <div className="text-xs text-neutral-400">Properties</div>
+                      <div className="text-sm font-semibold text-white mt-1">7</div>
                     </div>
                   </div>
                 </div>
