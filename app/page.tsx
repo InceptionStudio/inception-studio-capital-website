@@ -143,7 +143,7 @@ export default function Home(){
               <div className="text-lg font-semibold">Allocations are limited for Fund I.</div>
               <div className="text-neutral-300 text-sm">Minimum commitment $250K. Initial capital call 25%.</div>
             </div>
-            <PrimaryCTA href="/secure-allocation">Secure allocation</PrimaryCTA>
+            <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
           </Container>
         </section>
       </main>
