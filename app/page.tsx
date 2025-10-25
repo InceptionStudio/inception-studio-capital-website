@@ -39,6 +39,57 @@ export default function Home(){
           </Container>
         </section>
 
+        {/* THE OPPORTUNITY */}
+        <section className="py-16 md:py-24 border-t border-white/5" id="opportunity">
+          <Container>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <p className="eyebrow justify-center">The Opportunity</p>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">Why Experienced Founders Choose Us</h2>
+              <p className="mt-3 text-xl text-neutral-300">Traditional accelerators fail elite founders. We built something different.</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <Card>
+                <div className="p-8">
+                  <div className="text-4xl mb-4">🎯</div>
+                  <h3 className="text-lg font-bold text-teal-300 mb-3">Zero Equity Model</h3>
+                  <p className="text-neutral-300 leading-relaxed">Our non-profit accelerator takes 0% equity, attracting founders who would never join YC or traditional programs.</p>
+                </div>
+              </Card>
+              <Card>
+                <div className="p-8">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h3 className="text-lg font-bold text-teal-300 mb-3">3-Day Retreats</h3>
+                  <p className="text-neutral-300 leading-relaxed">Not a 3-month program. Experienced founders need focus and deadlines, not basic startup education.</p>
+                </div>
+              </Card>
+              <Card>
+                <div className="p-8">
+                  <div className="text-4xl mb-4">🚀</div>
+                  <h3 className="text-lg font-bold text-teal-300 mb-3">First Money In</h3>
+                  <p className="text-neutral-300 leading-relaxed">We invest at formation, before anyone else. Best terms, privileged access to elite founders.</p>
+                </div>
+              </Card>
+            </div>
+
+            <Card className="max-w-4xl mx-auto">
+              <div className="p-8">
+                <blockquote className="text-lg text-neutral-200 italic leading-relaxed mb-6">
+                  &ldquo;Inception gave us that initial push to get over the &apos;activation energy&apos; required... Our company would not exist without Inception.&rdquo;
+                </blockquote>
+                <div className="flex items-start gap-4">
+                  <div className="h-12 w-12 rounded-full bg-gradient-to-tr from-teal-400 to-cyan-500 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-white">Andy Chou</div>
+                    <div className="text-sm text-neutral-300 mt-1">Founder & CEO, Ventrilo (raised $10M from a16z)</div>
+                    <div className="text-sm text-neutral-400 mt-1">Previously founded Coverity (acquired for $350M)</div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </Container>
+        </section>
+
         {/* OUR EDGE */}
         <section className="py-16 md:py-24 border-t border-white/5 relative overflow-hidden" id="edge">
           <div className="pointer-events-none absolute inset-0 -z-10">
@@ -113,25 +164,161 @@ export default function Home(){
         {/* PORTFOLIO PREVIEW */}
         <section className="py-16 md:py-24 border-t border-white/5" id="portfolio">
           <Container>
-            <div className="flex items-end justify-between gap-6 flex-wrap">
-              <SectionTitle title="Selective portfolio, privileged access" subtitle="42 companies founded through Inception have raised $166M+ in follow-on funding."/>
-              <SecondaryCTA href="/portfolio">See all companies</SecondaryCTA>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <p className="eyebrow justify-center">Portfolio</p>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">Backing AI&apos;s Future Leaders</h2>
+              <p className="mt-3 text-xl text-neutral-300">From Stanford PhDs to exited founders, our portfolio represents the best of Silicon Valley</p>
             </div>
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-              {['Ventrilo','Mem0','TextClub','Coframe','GuestOS','Rmix','Greenflash','First Intelligence','Alex AI','Scorecard','Hyperscale','Axiom'].map((name)=> (
-                <div key={name} className="flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-4 py-6 text-sm text-neutral-300">
-                  {name}
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {/* Ventrilo */}
+              <Card>
+                <div className="p-6">
+                  <div className="mb-4">
+                    <div className="text-lg font-bold text-white">Ventrilo.ai</div>
+                    <div className="text-sm text-neutral-400 mt-1">AI-powered quality for developers</div>
+                  </div>
+                  <div className="mb-4">
+                    <div className="text-sm font-semibold text-teal-300">Andy Chou</div>
+                    <p className="text-sm text-neutral-300 mt-1">Stanford PhD, Coverity Founder/CTO (acq. by Synopsys for $350M)</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                    <div>
+                      <div className="text-xs text-neutral-400">Valuation</div>
+                      <div className="text-sm font-semibold text-white mt-1">$50M</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-neutral-400">Lead Investor</div>
+                      <div className="text-sm font-semibold text-white mt-1">a16z</div>
+                    </div>
+                  </div>
                 </div>
-              ))}
+              </Card>
+
+              {/* Coframe */}
+              <Card>
+                <div className="p-6">
+                  <div className="mb-4">
+                    <div className="text-lg font-bold text-white">Coframe</div>
+                    <div className="text-sm text-neutral-400 mt-1">Automatically refine UX with AI</div>
+                  </div>
+                  <div className="mb-4">
+                    <div className="text-sm font-semibold text-teal-300">Josh Payne</div>
+                    <p className="text-sm text-neutral-300 mt-1">2x Stanford dropout, Founder Autograph (unicorn), AccessBell (acquired)</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                    <div>
+                      <div className="text-xs text-neutral-400">Raised</div>
+                      <div className="text-sm font-semibold text-white mt-1">$9M</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-neutral-400">Lead Investor</div>
+                      <div className="text-sm font-semibold text-white mt-1">Khosla</div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* SynthPop */}
+              <Card>
+                <div className="p-6">
+                  <div className="mb-4">
+                    <div className="text-lg font-bold text-white">SynthPop</div>
+                    <div className="text-sm text-neutral-400 mt-1">Unlocking AI for healthcare</div>
+                  </div>
+                  <div className="mb-4">
+                    <div className="text-sm font-semibold text-teal-300">Elad Ferber &amp; Jan Jannick</div>
+                    <p className="text-sm text-neutral-300 mt-1">Founder Spry Health; Stanford PhD, Founder imeem and VoiceBase</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                    <div>
+                      <div className="text-xs text-neutral-400">Valuation</div>
+                      <div className="text-sm font-semibold text-white mt-1">$40M</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-neutral-400">TVPI</div>
+                      <div className="text-sm font-semibold text-white mt-1">2.29X</div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Mem0 */}
+              <Card>
+                <div className="p-6">
+                  <div className="mb-4">
+                    <div className="text-lg font-bold text-white">Mem0</div>
+                    <div className="text-sm text-neutral-400 mt-1">Cross-platform memory for LLMs</div>
+                  </div>
+                  <div className="mb-4">
+                    <div className="text-sm font-semibold text-teal-300">Taranjeet Singh &amp; Deshraj Yadav</div>
+                    <p className="text-sm text-neutral-300 mt-1">First GPT Store (400K MAU), Led AI Platform at Tesla</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                    <div>
+                      <div className="text-xs text-neutral-400">Series A</div>
+                      <div className="text-sm font-semibold text-white mt-1">$20M</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-neutral-400">GitHub Stars</div>
+                      <div className="text-sm font-semibold text-white mt-1">40K+</div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* First Intelligence */}
+              <Card>
+                <div className="p-6">
+                  <div className="mb-4">
+                    <div className="text-lg font-bold text-white">First Intelligence</div>
+                    <div className="text-sm text-neutral-400 mt-1">AI that remembers everything</div>
+                  </div>
+                  <div className="mb-4">
+                    <div className="text-sm font-semibold text-teal-300">Kelly Peng &amp; Bayley Wang</div>
+                    <p className="text-sm text-neutral-300 mt-1">UC Berkeley EECS, MIT EECS, 15+ patents, Forbes 30u30</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                    <div>
+                      <div className="text-xs text-neutral-400">TVPI</div>
+                      <div className="text-sm font-semibold text-white mt-1">2.00X</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-neutral-400">Awards</div>
+                      <div className="text-sm font-semibold text-white mt-1">2x CES</div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* GuestOS */}
+              <Card>
+                <div className="p-6">
+                  <div className="mb-4">
+                    <div className="text-lg font-bold text-white">GuestOS</div>
+                    <div className="text-sm text-neutral-400 mt-1">AI Concierge for hospitality</div>
+                  </div>
+                  <div className="mb-4">
+                    <div className="text-sm font-semibold text-teal-300">Jessie Fischer</div>
+                    <p className="text-sm text-neutral-300 mt-1">20+ years in hospitality, Superhost for 7 properties</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                    <div>
+                      <div className="text-xs text-neutral-400">Customers</div>
+                      <div className="text-sm font-semibold text-white mt-1">10+</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-neutral-400">TVPI</div>
+                      <div className="text-sm font-semibold text-white mt-1">1.56X</div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
             </div>
-            <div className="mt-10 grid md:grid-cols-3 gap-6">
-              {[
-                {title:'Mem0', text:'$20M Series A. Cross-platform memory layer for LLMs. 40K+ stars on GitHub.'},
-                {title:'Ventrilo', text:'$10M from a16z after forming team & demo at Inception.'},
-                {title:'Alex AI', text:'Acquired by OpenAI (Aug 2025).'},
-              ].map((f,i)=> (
-                <Card key={i}><div className="p-6"><div className="font-semibold">{f.title}</div><p className="mt-2 text-neutral-300 text-sm">{f.text}</p></div></Card>
-              ))}
+
+            <div className="text-center">
+              <p className="text-lg text-neutral-300 mb-4">Plus 36 more exceptional companies...</p>
+              <SecondaryCTA href="/portfolio">View Full Portfolio</SecondaryCTA>
             </div>
           </Container>
         </section>
