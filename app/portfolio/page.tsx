@@ -6,7 +6,7 @@ export default function Page(){
   const companies = [
     {name:'Ventrilo', blurb:'Voice‑native collaboration. $10M from a16z after forming team & demo at Inception.'},
     {name:'Mem0', blurb:'Cross-platform memory layer for LLMs. $20M Series A. 40K+ stars on GitHub.'},
-    {name:'TextClub', blurb:'$200M+ ARR in 6 months at Playco. 20% conversion, 54% D1 retention. Pioneering $100B+ mobile gaming ecosystem.'},
+    {name:'TextClub', blurb:'In stealth. Founded by Deyan Vitanov: Stanford MBA, 4x founder (3 acquired), CMO at gaming unicorn Playco.'},
     {name:'Coframe', blurb:'AI‑driven UX optimization. $9M from Khosla Ventures.'},
     {name:'Scorecard', blurb:'AI-native vertical SaaS for performance analytics.'},
     {name:'Hyperscale', blurb:'Scaling AI infrastructure for enterprise workloads.'},

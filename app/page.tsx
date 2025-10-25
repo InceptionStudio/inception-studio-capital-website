@@ -1,6 +1,7 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { Container, PrimaryCTA, SecondaryCTA, Card, SectionTitle, StatsRow } from '@/components/Blocks'
+import Link from 'next/link'
 
 export default function Home(){
   return (
@@ -23,6 +24,13 @@ export default function Home(){
                 <p className="mt-4 text-neutral-300 max-w-xl">We built the Bay Area’s most selective zero‑equity founder community. Our $20M fund takes first‑money positions and follows winners—with privileged access others can’t get.</p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
+                  <SecondaryCTA
+                    href="https://meetings-na2.hubspot.com/inception/fund1-info"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Schedule a call
+                  </SecondaryCTA>
                   <SecondaryCTA href="/faq">FAQ</SecondaryCTA>
                 </div>
                 <StatsRow/>
@@ -173,146 +181,218 @@ export default function Home(){
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {/* Ventrilo */}
               <Card>
-                <div className="p-6">
-                  <div className="mb-4">
-                    <div className="text-lg font-bold text-white">Ventrilo.ai</div>
-                    <div className="text-sm text-neutral-400 mt-1">AI-powered quality for developers</div>
-                  </div>
-                  <div className="mb-4">
-                    <div className="text-sm font-semibold text-teal-300">Andy Chou</div>
-                    <p className="text-sm text-neutral-300 mt-1">Stanford PhD, Coverity Founder/CTO (acq. by Synopsys for $350M)</p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                    <div>
-                      <div className="text-xs text-neutral-400">Raised</div>
-                      <div className="text-sm font-semibold text-white mt-1">$10M</div>
+                <Link
+                  href="https://ventrilo.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
+                    <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
+                      <img src="/logos/ventrilo.png" alt="Ventrilo logo" className="h-full w-full object-contain"/>
                     </div>
-                    <div>
-                      <div className="text-xs text-neutral-400">Lead Investor</div>
-                      <div className="text-sm font-semibold text-white mt-1">a16z</div>
+                    <div className="flex-1">
+                      <div className="mb-4">
+                        <div className="text-lg font-bold text-white">Ventrilo.ai</div>
+                        <div className="text-sm text-neutral-400 mt-1">AI-powered quality for developers</div>
+                      </div>
+                      <div className="mb-4">
+                        <div className="text-sm font-semibold text-teal-300">Andy Chou</div>
+                        <p className="text-sm text-neutral-300 mt-1">Stanford PhD, Coverity Founder/CTO (acq. by Synopsys for $350M)</p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                        <div>
+                          <div className="text-xs text-neutral-400">Raised</div>
+                          <div className="text-sm font-semibold text-white mt-1">$10M</div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-neutral-400">Lead Investor</div>
+                          <div className="text-sm font-semibold text-white mt-1">a16z</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </Card>
 
               {/* Coframe */}
               <Card>
-                <div className="p-6">
-                  <div className="mb-4">
-                    <div className="text-lg font-bold text-white">Coframe</div>
-                    <div className="text-sm text-neutral-400 mt-1">Automatically refine UX with AI</div>
-                  </div>
-                  <div className="mb-4">
-                    <div className="text-sm font-semibold text-teal-300">Josh Payne</div>
-                    <p className="text-sm text-neutral-300 mt-1">2x Stanford dropout, Founder Autograph (unicorn), AccessBell (acquired)</p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                    <div>
-                      <div className="text-xs text-neutral-400">Raised</div>
-                      <div className="text-sm font-semibold text-white mt-1">$9M</div>
+                <Link
+                  href="https://coframe.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
+                    <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
+                      <img src="/logos/coframe.jpg" alt="Coframe logo" className="h-full w-full object-contain"/>
                     </div>
-                    <div>
-                      <div className="text-xs text-neutral-400">Lead Investor</div>
-                      <div className="text-sm font-semibold text-white mt-1">Khosla</div>
+                    <div className="flex-1">
+                      <div className="mb-4">
+                        <div className="text-lg font-bold text-white">Coframe</div>
+                        <div className="text-sm text-neutral-400 mt-1">Automatically refine UX with AI</div>
+                      </div>
+                      <div className="mb-4">
+                        <div className="text-sm font-semibold text-teal-300">Josh Payne</div>
+                        <p className="text-sm text-neutral-300 mt-1">2x Stanford dropout, Founder Autograph (unicorn), AccessBell (acquired)</p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                        <div>
+                          <div className="text-xs text-neutral-400">Raised</div>
+                          <div className="text-sm font-semibold text-white mt-1">$9M</div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-neutral-400">Lead Investor</div>
+                          <div className="text-sm font-semibold text-white mt-1">Khosla</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </Card>
 
               {/* SynthPop */}
               <Card>
-                <div className="p-6">
-                  <div className="mb-4">
-                    <div className="text-lg font-bold text-white">SynthPop</div>
-                    <div className="text-sm text-neutral-400 mt-1">Unlocking AI for healthcare</div>
-                  </div>
-                  <div className="mb-4">
-                    <div className="text-sm font-semibold text-teal-300">Elad Ferber &amp; Jan Jannick</div>
-                    <p className="text-sm text-neutral-300 mt-1">Founder Spry Health; Stanford PhD, Founder imeem and VoiceBase</p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                    <div>
-                      <div className="text-xs text-neutral-400">Raised</div>
-                      <div className="text-sm font-semibold text-white mt-1">$23M</div>
+                <Link
+                  href="https://synthpop.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
+                    <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
+                      <img src="/logos/synthpop.png" alt="SynthPop logo" className="h-full w-full object-contain"/>
                     </div>
-                    <div>
-                      <div className="text-xs text-neutral-400">Founded</div>
-                      <div className="text-sm font-semibold text-white mt-1">2023</div>
+                    <div className="flex-1">
+                      <div className="mb-4">
+                        <div className="text-lg font-bold text-white">SynthPop</div>
+                        <div className="text-sm text-neutral-400 mt-1">Unlocking AI for healthcare</div>
+                      </div>
+                      <div className="mb-4">
+                        <div className="text-sm font-semibold text-teal-300">Elad Ferber &amp; Jan Jannick</div>
+                        <p className="text-sm text-neutral-300 mt-1">Founder Spry Health; Stanford PhD, Founder imeem and VoiceBase</p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                        <div>
+                          <div className="text-xs text-neutral-400">Raised</div>
+                          <div className="text-sm font-semibold text-white mt-1">$23M</div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-neutral-400">Founded</div>
+                          <div className="text-sm font-semibold text-white mt-1">2023</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </Card>
 
               {/* Mem0 */}
               <Card>
-                <div className="p-6">
-                  <div className="mb-4">
-                    <div className="text-lg font-bold text-white">Mem0</div>
-                    <div className="text-sm text-neutral-400 mt-1">Cross-platform memory for LLMs</div>
-                  </div>
-                  <div className="mb-4">
-                    <div className="text-sm font-semibold text-teal-300">Taranjeet Singh &amp; Deshraj Yadav</div>
-                    <p className="text-sm text-neutral-300 mt-1">First GPT Store (400K MAU), Led AI Platform at Tesla</p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                    <div>
-                      <div className="text-xs text-neutral-400">Series A</div>
-                      <div className="text-sm font-semibold text-white mt-1">$20M</div>
+                <Link
+                  href="https://mem0.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
+                    <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
+                      <img src="/logos/mem0.svg" alt="Mem0 logo" className="h-full w-full object-contain"/>
                     </div>
-                    <div>
-                      <div className="text-xs text-neutral-400">GitHub Stars</div>
-                      <div className="text-sm font-semibold text-white mt-1">40K+</div>
+                    <div className="flex-1">
+                      <div className="mb-4">
+                        <div className="text-lg font-bold text-white">Mem0</div>
+                        <div className="text-sm text-neutral-400 mt-1">Cross-platform memory for LLMs</div>
+                      </div>
+                      <div className="mb-4">
+                        <div className="text-sm font-semibold text-teal-300">Taranjeet Singh &amp; Deshraj Yadav</div>
+                        <p className="text-sm text-neutral-300 mt-1">First GPT Store (400K MAU), Led AI Platform at Tesla</p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                        <div>
+                          <div className="text-xs text-neutral-400">Series A</div>
+                          <div className="text-sm font-semibold text-white mt-1">$20M</div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-neutral-400">GitHub Stars</div>
+                          <div className="text-sm font-semibold text-white mt-1">40K+</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </Card>
 
               {/* First Intelligence */}
               <Card>
-                <div className="p-6">
-                  <div className="mb-4">
-                    <div className="text-lg font-bold text-white">First Intelligence</div>
-                    <div className="text-sm text-neutral-400 mt-1">AI that remembers everything</div>
-                  </div>
-                  <div className="mb-4">
-                    <div className="text-sm font-semibold text-teal-300">Kelly Peng</div>
-                    <p className="text-sm text-neutral-300 mt-1">UC Berkeley EECS, MIT EECS, 15+ patents, Forbes 30u30</p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                    <div>
-                      <div className="text-xs text-neutral-400">Patents</div>
-                      <div className="text-sm font-semibold text-white mt-1">15+</div>
+                <Link
+                  href="https://first-intelligence.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
+                    <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
+                      <img src="/logos/first-intelligence.png" alt="First Intelligence logo" className="h-full w-full object-contain"/>
                     </div>
-                    <div>
-                      <div className="text-xs text-neutral-400">Awards</div>
-                      <div className="text-sm font-semibold text-white mt-1">2x CES</div>
+                    <div className="flex-1">
+                      <div className="mb-4">
+                        <div className="text-lg font-bold text-white">First Intelligence</div>
+                        <div className="text-sm text-neutral-400 mt-1">AI that remembers everything</div>
+                      </div>
+                      <div className="mb-4">
+                        <div className="text-sm font-semibold text-teal-300">Kelly Peng</div>
+                        <p className="text-sm text-neutral-300 mt-1">UC Berkeley EECS, MIT EECS, 15+ patents, Forbes 30u30</p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                        <div>
+                          <div className="text-xs text-neutral-400">Patents</div>
+                          <div className="text-sm font-semibold text-white mt-1">15+</div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-neutral-400">Awards</div>
+                          <div className="text-sm font-semibold text-white mt-1">2x CES</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </Card>
 
-              {/* GuestOS */}
+              {/* AxiomBio */}
               <Card>
-                <div className="p-6">
-                  <div className="mb-4">
-                    <div className="text-lg font-bold text-white">GuestOS</div>
-                    <div className="text-sm text-neutral-400 mt-1">AI Concierge for hospitality</div>
-                  </div>
-                  <div className="mb-4">
-                    <div className="text-sm font-semibold text-teal-300">Jessie Fischer</div>
-                    <p className="text-sm text-neutral-300 mt-1">20+ years in hospitality, Superhost for 7 properties</p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                    <div>
-                      <div className="text-xs text-neutral-400">Customers</div>
-                      <div className="text-sm font-semibold text-white mt-1">10+</div>
+                <Link
+                  href="https://axi.om/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
+                    <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
+                      <img src="/logos/axiom.png" alt="AxiomBio logo" className="h-full w-full object-contain"/>
                     </div>
-                    <div>
-                      <div className="text-xs text-neutral-400">Properties</div>
-                      <div className="text-sm font-semibold text-white mt-1">7</div>
+                    <div className="flex-1">
+                      <div className="mb-4">
+                        <div className="text-lg font-bold text-white">AxiomBio</div>
+                        <div className="text-sm text-neutral-400 mt-1">AI toxicity platform replacing animal testing</div>
+                      </div>
+                      <div className="mb-4">
+                        <div className="text-sm font-semibold text-teal-300">Brandon White &amp; Alex Beatson</div>
+                        <p className="text-sm text-neutral-300 mt-1">Beatson, ex-Director of ML at Redesign Science, Princeton PhD in generative models, and 2× Scale AI GenAI hackathon runner-up</p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                        <div>
+                          <div className="text-xs text-neutral-400">Funding</div>
+                          <div className="text-sm font-semibold text-white mt-1">$15M Series A</div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-neutral-400">Enterprise pilots</div>
+                          <div className="text-sm font-semibold text-white mt-1">7 pharma</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </Card>
             </div>
 
@@ -330,7 +410,16 @@ export default function Home(){
               <div className="text-lg font-semibold">Allocations are limited for Fund I.</div>
               <div className="text-neutral-300 text-sm">Minimum commitment $250K. Initial capital call 25%.</div>
             </div>
-            <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
+            <div className="flex flex-wrap gap-3 justify-center md:justify-end">
+              <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
+              <SecondaryCTA
+                href="https://meetings-na2.hubspot.com/inception/fund1-info"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Schedule a call
+              </SecondaryCTA>
+            </div>
           </Container>
         </section>
       </main>

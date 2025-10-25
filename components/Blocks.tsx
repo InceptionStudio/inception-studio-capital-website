@@ -5,11 +5,11 @@ import { ReactNode } from 'react'
 export function Container({ children, className='' }: {children:ReactNode, className?:string}){
   return <div className={`container-max ${className}`}>{children}</div>
 }
-export function PrimaryCTA({ href, children }: {href:string, children:ReactNode}){
-  return <Link href={href} className="btn btn-primary">{children} <ArrowRight className="h-4 w-4"/></Link>
+export function PrimaryCTA({ href, children, target, rel }: {href:string, children:ReactNode, target?:string, rel?:string}){
+  return <Link href={href} target={target} rel={rel} className="btn btn-primary">{children} <ArrowRight className="h-4 w-4"/></Link>
 }
-export function SecondaryCTA({ href, children }: {href:string, children:ReactNode}){
-  return <Link href={href} className="btn btn-secondary">{children}</Link>
+export function SecondaryCTA({ href, children, target, rel }: {href:string, children:ReactNode, target?:string, rel?:string}){
+  return <Link href={href} target={target} rel={rel} className="btn btn-secondary">{children}</Link>
 }
 export function Card({ children, className='' }: {children:ReactNode, className?:string}){
   return <div className={`card ${className}`}>{children}</div>

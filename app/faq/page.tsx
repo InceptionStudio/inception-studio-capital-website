@@ -1,6 +1,6 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { Container, SectionTitle } from '@/components/Blocks'
+import { Container, PrimaryCTA, SectionTitle } from '@/components/Blocks'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
@@ -23,6 +23,15 @@ export default function Page(){
         <section className="py-16 md:py-24">
           <Container>
             <SectionTitle eyebrow="FAQ" title="Frequently asked"/>
+            <div className="mt-6 flex">
+              <PrimaryCTA
+                href="https://meetings-na2.hubspot.com/inception/fund1-info"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Schedule a call
+              </PrimaryCTA>
+            </div>
             <div className="mt-6 divide-y divide-white/10">
               {items.map((f, i)=> (
                 <details key={i} className="group py-4">
@@ -41,7 +50,7 @@ export default function Page(){
                 <p className="mt-3 text-neutral-300">
                   <Link href="/invest" className="text-teal-300 hover:text-teal-200 underline">Complete the investment form</Link> to confirm accredited investor status and review offering documents. Email{' '}
                   <a href="mailto:invest@inceptionstudio.capital" className="text-teal-300 hover:text-teal-200 underline">invest@inceptionstudio.capital</a> or{' '}
-                  <a href="https://app-na2.hubspot.com/meetings/inception/fund1-info" target="_blank" rel="noopener noreferrer" className="text-teal-300 hover:text-teal-200 underline">schedule a no-obligation call with a Partner</a>. We also host Demo Days where you can see founders and companies firsthand.
+                  <a href="https://meetings-na2.hubspot.com/inception/fund1-info" target="_blank" rel="noopener noreferrer" className="text-teal-300 hover:text-teal-200 underline">schedule a no-obligation call with a Partner</a>. We also host Demo Days where you can see founders and companies firsthand.
                 </p>
               </details>
             </div>
