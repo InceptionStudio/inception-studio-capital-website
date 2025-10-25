@@ -15,6 +15,7 @@ export default function Nav(){
           <nav className="hidden md:flex items-center gap-8 text-sm">
             <Link href="/thesis" className="hover:text-white/90">Thesis</Link>
             <Link href="/portfolio" className="hover:text-white/90">Portfolio</Link>
+            <Link href="/team" className="hover:text-white/90">Team</Link>
             <Link href="/faq" className="hover:text-white/90">FAQ</Link>
             <Link href="/invest" className="btn btn-primary">Invest with us</Link>
           </nav>
@@ -26,7 +27,7 @@ export default function Nav(){
       {open && (
         <div className="md:hidden border-t border-white/5 bg-neutral-950/90">
           <div className="px-4 py-4 space-y-3">
-            {[['Thesis','/thesis'],['Portfolio','/portfolio'],['FAQ','/faq']].map(([label, path])=> (
+            {[['Thesis','/thesis'],['Portfolio','/portfolio'],['Team','/team'],['FAQ','/faq']].map(([label, path])=> (
               <Link key={path} href={path} className="block py-1">{label}</Link>
             ))}
             <Link href="/invest" className="btn btn-primary w-full justify-center">Invest with us</Link>
