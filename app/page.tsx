@@ -23,7 +23,6 @@ export default function Home(){
                 <p className="mt-4 text-neutral-300 max-w-xl">We built the Bay Area’s most selective zero‑equity founder community. Our $20M fund takes first‑money positions and follows winners—with privileged access others can’t get.</p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
-                  <SecondaryCTA href="/interest">Register interest</SecondaryCTA>
                   <SecondaryCTA href="/faq">FAQ</SecondaryCTA>
                 </div>
                 <StatsRow/>

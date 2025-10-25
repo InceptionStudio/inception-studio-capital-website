@@ -36,11 +36,9 @@ pnpm lint
 - All pages follow the pattern: `<Nav/> → <main>sections</main> → <Footer/>`
 
 **Form submission flow:**
-1. Client-side forms POST to `/api/invest` or `/api/interest`
-2. API routes validate required fields (name, email, ±commitment)
-3. If `FORWARD_WEBHOOK_URL` env var is set, payload is forwarded as JSON
-4. Returns `{ ok: true }` or `{ ok: false, error: string }`
-5. Client displays success/error states without page reload
+1. `/invest` page uses HubSpot embedded form for investor applications
+2. Form loads dynamically via HubSpot Forms API
+3. Submissions handled entirely by HubSpot (Portal ID: 23586544)
 
 ## Environment Variables
 
@@ -63,7 +61,6 @@ Designed for Vercel:
 ## Key Pages
 
 - `/` - Home (hero, KPIs, thesis, portfolio, commit CTA)
-- `/invest` - Primary CTA form (requires name, email, commitment amount)
-- `/interest` - Secondary CTA form (lighter touch, just name/email/accreditation)
+- `/invest` - Primary CTA with HubSpot embedded form for investor applications
 - `/thesis`, `/portfolio`, `/faq` - Supporting content pages
 - `/privacy`, `/legal` - Compliance pages

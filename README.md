@@ -13,14 +13,12 @@ pnpm dev # http://localhost:3000
 - Point DNS for **inceptionstudio.capital** to Vercel.  
 
 ## Forms
-- **/invest** → POST `/api/invest`
-- **/interest** → POST `/api/interest`
+- **/invest** → HubSpot embedded form for investor applications
 - If `FORWARD_WEBHOOK_URL` is set, submissions are forwarded as JSON; otherwise we still return `{ ok: true }`.
 
 ## Pages
 - `/` (Home): hero, KPIs, thesis preview, portfolio preview, commit strip
 - `/invest` (primary CTA)
-- `/interest` (secondary CTA)
 - `/thesis`, `/portfolio`, `/faq`, `/privacy`, `/legal`
 
 ## Styling

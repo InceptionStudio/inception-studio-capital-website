@@ -24,9 +24,8 @@ export default function Page(){
                   <li>Early allocation in hard‑to‑access AI teams; ability to double‑down post‑signal.</li>
                   <li>Disciplined pacing and reserves with strong governance.</li>
                 </ul>
-                <div className="mt-5 flex gap-3">
+                <div className="mt-5">
                   <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
-                  <SecondaryCTA href="/interest">Register interest</SecondaryCTA>
                 </div>
               </div></Card>
             </div>
