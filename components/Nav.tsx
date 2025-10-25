@@ -9,7 +9,7 @@ export default function Nav(){
       <div className="container-max">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded-xl bg-gradient-to-tr from-teal-400 to-cyan-500" />
+            <img src="/inception-logo.png" alt="Inception Studio Capital" className="h-8 w-auto" />
             <span className="font-semibold tracking-tight">Inception Studio Capital</span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm">
