@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { Container, SectionTitle } from '@/components/Blocks'
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Page(){
   const items = [
@@ -13,7 +14,6 @@ export default function Page(){
     {q:'What kind of founders do you attract?', a:'Experienced technical founders: 82% repeat entrepreneurs, 32% with prior successful exits, 15+ years average industry experience, 84 NPS score, 87% referred by other founders. These are founders who would never join traditional accelerators but value our zero-equity model for co-founder matching and focused environment.'},
     {q:'What portfolio results have you achieved?', a:'42 companies founded through Inception have raised $166M+ in follow-on funding. Notable outcomes include: Mem0 ($20M Series A), Ventrilo ($10M from a16z), Coframe ($9M from Khosla), and Alex AI (acquired by OpenAI in August 2025). Multiple companies achieving significant valuation increases.'},
     {q:'Why do experienced founders choose Inception?', a:'They face unique challenges: highly selective about co-founders, networks may have aged out, traditional accelerators don\'t make sense (7% for $125K?), and they need a deadline to get started. Our 3-day zero-equity retreats solve these problems while providing community, advisory, recruiting, and fundraising support.'},
-    {q:'How can I learn more or invest?', a:'Complete the investment form to confirm accredited investor status and review offering documents. Email invest@inceptionstudio.capital or schedule a no-obligation call with a Partner. We also host Demo Days where you can see founders and companies firsthand.'},
   ]
   return (
     <>
@@ -32,6 +32,17 @@ export default function Page(){
                   <p className="mt-3 text-neutral-300">{f.a}</p>
                 </details>
               ))}
+              <details className="group py-4">
+                <summary className="cursor-pointer list-none flex items-center justify-between text-left">
+                  <span className="font-medium">How can I learn more or invest?</span>
+                  <ArrowRight className="h-4 w-4 transition-transform group-open:rotate-90"/>
+                </summary>
+                <p className="mt-3 text-neutral-300">
+                  <Link href="/invest" className="text-teal-300 hover:text-teal-200 underline">Complete the investment form</Link> to confirm accredited investor status and review offering documents. Email{' '}
+                  <a href="mailto:invest@inceptionstudio.capital" className="text-teal-300 hover:text-teal-200 underline">invest@inceptionstudio.capital</a> or{' '}
+                  <a href="https://app-na2.hubspot.com/meetings/inception/fund1-info" target="_blank" rel="noopener noreferrer" className="text-teal-300 hover:text-teal-200 underline">schedule a no-obligation call with a Partner</a>. We also host Demo Days where you can see founders and companies firsthand.
+                </p>
+              </details>
             </div>
           </Container>
         </section>
