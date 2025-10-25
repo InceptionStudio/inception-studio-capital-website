@@ -1,8 +1,38 @@
+'use client'
+import { useEffect } from 'react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { Container, SectionTitle } from '@/components/Blocks'
 
 export default function Page(){
+  useEffect(() => {
+    // Load HubSpot forms script
+    const script = document.createElement('script')
+    script.src = '//js-na2.hsforms.net/forms/embed/v2.js'
+    script.charset = 'utf-8'
+    script.type = 'text/javascript'
+    script.async = true
+
+    script.onload = () => {
+      // @ts-ignore
+      if (window.hbspt) {
+        // @ts-ignore
+        window.hbspt.forms.create({
+          portalId: "23586544",
+          formId: "6535888b-e243-4eec-9b7d-d464650ad08c",
+          region: "na2",
+          target: '#hubspot-form'
+        })
+      }
+    }
+
+    document.body.appendChild(script)
+
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
+
   return (
     <>
       <Nav/>
@@ -11,7 +41,7 @@ export default function Page(){
           <Container>
             <SectionTitle eyebrow="Get Started" title="Invest with us"/>
             <div className="mt-8 max-w-3xl">
-              <div className="card p-8 space-y-6 text-neutral-300 leading-relaxed">
+              <div className="space-y-6 text-neutral-300 leading-relaxed mb-8">
                 <p>Thank you for your interest in the Inception Studio Capital Fund.</p>
 
                 <p>The first step to getting started is to complete the form to confirm that you&apos;re an accredited investor.</p>
@@ -32,6 +62,10 @@ export default function Page(){
                     here
                   </a>.
                 </p>
+              </div>
+
+              <div className="card p-8">
+                <div id="hubspot-form"></div>
               </div>
             </div>
           </Container>
