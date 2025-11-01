@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import { Container } from '@/components/Blocks'
 import { Award, Linkedin, Mail, Phone } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import AdvisorsSection from '@/components/AdvisorsSection'
 
 const highlightIconClass = 'h-5 w-5 text-teal-300'
@@ -87,7 +88,15 @@ export default function TeamPage() {
             <div className="max-w-6xl mx-auto space-y-20">
               <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
                 <div>
-                  <div className="aspect-square rounded-2xl bg-white/5 ring-1 ring-white/10 mb-6" />
+                  <div className="aspect-square rounded-2xl bg-white/5 ring-1 ring-white/10 mb-6 overflow-hidden relative">
+                    <Image
+                      src="/team/john-whaley.jpeg"
+                      alt="John Whaley"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 400px"
+                    />
+                  </div>
                   <h2 className="text-3xl font-bold text-white">John Whaley</h2>
                   <p className="text-lg text-teal-300 mb-6">Co-Founder &amp; Managing Partner</p>
                   <ContactLinks
@@ -135,7 +144,15 @@ export default function TeamPage() {
 
               <div className="border-t border-white/10 pt-16 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
                 <div>
-                  <div className="aspect-square rounded-2xl bg-white/5 ring-1 ring-white/10 mb-6" />
+                  <div className="aspect-square rounded-2xl bg-white/5 ring-1 ring-white/10 mb-6 overflow-hidden relative">
+                    <Image
+                      src="/team/mike-morris.jpg"
+                      alt="Mike Morris"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 400px"
+                    />
+                  </div>
                   <h2 className="text-3xl font-bold text-white">Mike Morris</h2>
                   <p className="text-lg text-teal-300 mb-6">Co-Founder &amp; Managing Partner</p>
                   <ContactLinks

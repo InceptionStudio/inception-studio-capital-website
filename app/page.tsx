@@ -21,7 +21,7 @@ export default function Home(){
                 <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
                   Backing the most <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-400">experienced AI founders</span> from day zero.
                 </h1>
-                <p className="mt-4 text-neutral-300 max-w-xl">We built the Bay Area’s most selective zero‑equity founder community. Our $20M fund takes first‑money positions and follows winners—with privileged access others can’t get.</p>
+                <p className="mt-4 text-neutral-300 max-w-xl">We built the Bay Area’s most selective zero‑equity founder community. Our fund takes first‑money positions and follows winners—with privileged access others can’t get.</p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
                   <SecondaryCTA
@@ -287,7 +287,7 @@ export default function Home(){
                 </Link>
               </Card>
 
-              {/* Mem0 */}
+              {/* mem0 */}
               <Card>
                 <Link
                   href="https://mem0.ai"
@@ -297,11 +297,11 @@ export default function Home(){
                 >
                   <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
                     <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
-                      <img src="/logos/mem0.svg" alt="Mem0 logo" className="h-full w-full object-contain"/>
+                      <img src="/logos/mem0.svg" alt="mem0 logo" className="h-full w-full object-contain"/>
                     </div>
                     <div className="flex-1">
                       <div className="mb-4">
-                        <div className="text-lg font-bold text-white">Mem0</div>
+                        <div className="text-lg font-bold text-white">mem0</div>
                         <div className="text-sm text-neutral-400 mt-1">Cross-platform memory for LLMs</div>
                       </div>
                       <div className="mb-4">
