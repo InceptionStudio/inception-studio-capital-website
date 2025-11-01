@@ -114,7 +114,7 @@ export default function TeamPage() {
                   <Highlight
                     title="Entrepreneurship"
                     items={[
-                      'Redcoat AI: AI-powered cybersecurity (current)',
+                      'Redcoat AI: AI-powered cybersecurity',
                       'UnifyID: Behavioral biometrics authentication (acquired by Prove)',
                       'Moka5: Enterprise virtual desktop infrastructure (raised $45M+)',
                       'Multiple startup competition wins including SXSW, RSA, MIT AI Idol',
