@@ -9,28 +9,138 @@ export const advisors: Array<{
   avatar?: string;
   linkedin?: string;
 }> = [
-  { name: "Michael Liu", tagline: "Serial founder, ecosystem builder; ex‑PwC", linkedin: "https://www.linkedin.com/in/michaelshliu/" },
-  { name: "Tiffine Wang", tagline: "Investor; ex‑Partner MS&AD Ventures (100+ deals)", linkedin: "https://www.linkedin.com/in/tiffinewang/" },
-  { name: "Monisha Perkash", tagline: "2× exited founder; Stanford Startup Garage", linkedin: "" },
-  { name: "Patricia Liu", tagline: "Angel; pitch‑deck strategist; ex‑Accenture" },
-  { name: "Andrew Radin", tagline: "5× founder (2 exits); StartX lead mentor" },
-  { name: "Steve Barsh", tagline: "Founder/operator; former MP @ Dreamit" },
-  { name: "Shreeganesh Ramanan", tagline: "20+ yrs software; Microsoft/Apple/Optimizely" },
-  { name: "Kathy Wang", tagline: "Security & ops leader" },
-  { name: "Andrew Scheuermann", tagline: "Deep‑tech founder/operator; Stanford" },
-  { name: "Sophie Vu", tagline: "GTM & brand leader (3× acquired)" },
-  { name: "Assaf Einat", tagline: "Founder Boom Entertainment; Stanford MBA" },
-  { name: "Ben Peters", tagline: "Product & growth advisor" },
-  { name: "Anand Atreya", tagline: "AI researcher & startup advisor" },
-  { name: "Pablo Bariola", tagline: "Growth & investing" },
-  { name: "Evonne Johnson", tagline: "Product design & UX mentor" },
-  { name: "Shawn Kung", tagline: "AI/data infra founder‑operator" },
-  { name: "Adria Hou", tagline: "Design lead; angel" },
-  { name: "Arisa Makihara", tagline: "GenAI fund community; ANOBAKA (Tokyo)" },
-  { name: "Natsuki Tamura", tagline: "Head of G‑STARTUP; Globis MBA" },
-  { name: "Sae Nuruki", tagline: "MeltingHack founder; SWE @ Mercari" },
-  { name: "Yukio Uematsu", tagline: "AI researcher; startup mentor (JP)" },
-  { name: "Ed Kim", tagline: "Ex‑VMware; COO @ GuestOS" },
+  {
+    name: "Tiffine Wang",
+    tagline: "Investor & startup advisor; former Partner at MS&AD Ventures (100+ deals); ex-Singtel Innov8",
+    linkedin: "https://www.linkedin.com/in/tiffinewang/",
+    avatar: "/team/tiffine-wang.jpg"
+  },
+  {
+    name: "Patricia Liu",
+    tagline: "Angel investor & pitch-deck specialist; ex-Accenture consultant; hospitality entrepreneur",
+    linkedin: "https://www.linkedin.com/in/pjlconsulting/",
+    avatar: "/team/patricia-liu.jpg"
+  },
+  {
+    name: "Andrew Radin",
+    tagline: "5× founder (2 exits); StartX lead mentor; advisor to top investors; BS/MS CS @ Stanford BMI",
+    linkedin: "https://www.linkedin.com/in/andrewradin/",
+    avatar: "/team/andrew-radin.jpg"
+  },
+  {
+    name: "Steve Barsh",
+    tagline: "40 yrs founder/operator/investor; former Managing Partner Dreamit Ventures; ex-CEO & tech founder",
+    linkedin: "https://www.linkedin.com/in/stevebarsh/",
+    avatar: "/team/steve-barsh.jpg"
+  },
+  {
+    name: "Michael Liu",
+    tagline: "Serial founder & nonprofit ecosystem builder; ex-PwC; Rotman Commerce U of T",
+    linkedin: "https://www.linkedin.com/in/michaelshliu/",
+    avatar: "/team/michael-liu.jpg"
+  },
+  {
+    name: "Monisha Perkash",
+    tagline: "2× exited founder (Lumo Bodytech, TuitionCoach); Meta intrapreneur; teaches Startup Garage @ Stanford",
+    linkedin: "https://www.linkedin.com/in/monishaperkash/",
+    avatar: "/team/monisha-perkash.jpg"
+  },
+  {
+    name: "Assaf Einat",
+    tagline: "Founder @ Boom Entertainment; 20 yrs in tech, product & biz; Stanford MBA / CS BS",
+    linkedin: "https://www.linkedin.com/in/assafeinat",
+    avatar: "/team/assaf-einat.jpg"
+  },
+  {
+    name: "Shreeganesh Ramanan",
+    tagline: "20 yrs software @ Microsoft, Amazon, Apple; early Optimizely; UIUC CS",
+    linkedin: "https://www.linkedin.com/in/shreeganesh",
+    avatar: "/team/shreeganesh-ramanan.jpg"
+  },
+  {
+    name: "Sophie Vu",
+    tagline: "Marketing & GTM exec (3× acquired); BroadVision, Google, Hootsuite, Unbabel; UCLA Anderson MBA",
+    linkedin: "https://www.linkedin.com/in/sophie-vu415",
+    avatar: "/team/sophie-vu.jpg"
+  },
+  {
+    name: "Arisa Makihara",
+    tagline: "Community Manager @ ANOBAKA (GenAI fund); sales background @ Sekisui House; Japan startup connector",
+    linkedin: "https://www.linkedin.com/in/arisa-makihara-1a083617a",
+    avatar: "/team/arisa-makihara.jpg"
+  },
+  {
+    name: "Natsuki Tamura",
+    tagline: "Head of G-STARTUP Accelerator; Waseda BS, Globis MBA; Nikon & Recruit alum",
+    linkedin: "https://www.linkedin.com/in/natsuki-tamura-4a245545",
+    avatar: "/team/natsuki-tamura.jpg"
+  },
+  {
+    name: "Sae Nuruki",
+    tagline: "Founder MeltingHack International Hackathon Community; Software Engineer @ Mercari; Tokyo Tech & Toronto",
+    linkedin: "https://www.linkedin.com/in/saenuruki/",
+    avatar: "/team/sae-nuruki.jpg"
+  },
+  {
+    name: "Ed Kim",
+    tagline: "COO @ GuestOS; ex-Airbnb, Facebook, VMware; Stanford MBA, Cornell BS",
+    linkedin: "https://www.linkedin.com/in/ed-kim-4594231/",
+    avatar: "/team/ed-kim.jpg"
+  },
+  {
+    name: "Kathy Wang",
+    tagline: "Product designer (ex-Dropbox, IBM); Cornell MPS Info Sci (UX); Red Dot ‘Best of the Best’ award",
+    linkedin: "https://www.linkedin.com/in/kathytwang/",
+    avatar: "/team/kathy-wang.jpg"
+  },
+  {
+    name: "Andrew Scheuermann",
+    tagline: "Deep-tech founder & operator; Stanford PhD (Materials Science)",
+    linkedin: "https://www.linkedin.com/in/andrewscheuermann/",
+    avatar: "/team/andrew-scheuermann.jpg"
+  },
+  {
+    name: "Ben Peters",
+    tagline: "Product & growth advisor; former product lead at Google and Dropbox",
+    linkedin: "https://www.linkedin.com/in/ben-peters-6ba44ab",
+    avatar: "/team/ben-peters.jpg"
+  },
+  {
+    name: "Anand Atreya",
+    tagline: "AI researcher and startup advisor; former DeepMind & Stanford AI Lab",
+    linkedin: "https://www.linkedin.com/in/anandatreya/",
+    avatar: "/team/anand-atreya.jpg"
+  },
+  {
+    name: "Pablo Bariola",
+    tagline: "Growth & investment advisor; ex-SoftBank Ventures",
+    linkedin: "https://www.linkedin.com/in/pbariola",
+    avatar: "/team/pablo-bariola.jpg"
+  },
+  {
+    name: "Evonne Johnson",
+    tagline: "Product design & UX mentor; founder & creative director background",
+    linkedin: "https://www.linkedin.com/in/evonnejohnson/",
+    avatar: "/team/evonne-johnson.jpg"
+  },
+  {
+    name: "Shawn Kung",
+    tagline: "AI infra & data systems founder-operator; ex-Google Cloud ML platform",
+    linkedin: "https://www.linkedin.com/in/shawnkung/",
+    avatar: "/team/shawn-kung.jpg"
+  },
+  {
+    name: "Adria Hou",
+    tagline: "Design lead & angel investor; UX/UI advisor to AI startups in Asia and US",
+    linkedin: "https://www.linkedin.com/in/adriahou/",
+    avatar: "/team/adria-hou.jpg"
+  },
+  {
+    name: "Yukio Uematsu",
+    tagline: "AI researcher and startup mentor (Japan); focus on LLM applications & robotics",
+    linkedin: "https://www.linkedin.com/in/yukio-uematsu-baab277",
+    avatar: "/team/yukio-uematsu.jpg"
+  }
 ];
 
 // --- Card component ---
