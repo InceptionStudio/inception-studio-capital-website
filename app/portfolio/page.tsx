@@ -23,7 +23,7 @@ export default function Page(){
     {name:'Lightning Rod', blurb:'Accurate predictive models with AI.', logo:'/logos/lightning-rod.png', url:'https://www.lightningrod.ai/'},
     {name:'Skywalk', blurb:'Device-specific ML.', logo:'/logos/skywalk.png', url:'https://www.skywalk.ai/'},
     {name:'First Intelligence', blurb:'Perplexity for the real world. Multimodal AI that can see, understand, and generate. Available as CAPI AI.', logo:'/logos/first-intelligence.png', url:'https://first-intelligence.com'},
-    {name:'Omi', blurb:'AI-native consumer application platform.', logo:'/logos/omi.png', url:'https://www.omi.me/'},
+    {name:'Omi', blurb:'AI wearable “second brain” that turns conversations into insights and memory you can search, summarize, and share.', logo:'/logos/omi.png', url:'https://www.omi.me/'},
     {name:'GuestOS', blurb:'Voice AI for hospitality. 10 customers in production.', logo:'/logos/guestos.ico', url:'https://guestos.ai'},
     {name:'PrismaX', blurb:'Building the bridge between robotics and mainstream adoption.', logo:'/logos/prismax.svg', url:'https://prismax.ai/'},
     {name:'April', blurb:'Voice AI executive assistant.', logo:'/logos/april.jpg', url:'https://tryapril.com/'},
