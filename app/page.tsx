@@ -181,7 +181,7 @@ export default function Home(){
         {/* PORTFOLIO PREVIEW */}
         <section className="py-16 md:py-24 border-t border-white/5" id="portfolio">
           <Container>
-            <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="text-center max-w-4xl mx-auto mb-12">
               <p className="eyebrow justify-center">Portfolio</p>
               <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">Backing AI&apos;s Future Leaders</h2>
               <p className="mt-3 text-xl text-neutral-300">From Stanford PhDs to exited founders, our portfolio represents the best of Silicon Valley</p>
