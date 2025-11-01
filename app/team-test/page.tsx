@@ -1,6 +1,6 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { Container } from '@/components/Blocks'
+import { Container, PrimaryCTA, SecondaryCTA } from '@/components/Blocks'
 import { Award, Linkedin, Mail, Phone } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -203,6 +203,26 @@ export default function TeamTestPage() {
         </section>
 
         <AdvisorsSection />
+
+        {/* CTA SECTION */}
+        <section className="py-10 border-t border-white/5 bg-gradient-to-r from-teal-950/40 to-cyan-950/40">
+          <Container className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+              <div className="text-lg font-semibold">Ready to invest in the next generation of AI founders?</div>
+              <div className="text-neutral-300 text-sm">Join our limited allocation for Fund I. Minimum commitment $250K.</div>
+            </div>
+            <div className="flex flex-wrap gap-3 justify-center md:justify-end">
+              <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
+              <SecondaryCTA
+                href="https://meetings-na2.hubspot.com/inception/fund1-info"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Schedule a call
+              </SecondaryCTA>
+            </div>
+          </Container>
+        </section>
       </main>
       <Footer />
     </>
