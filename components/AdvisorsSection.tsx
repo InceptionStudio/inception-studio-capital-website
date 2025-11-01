@@ -46,22 +46,40 @@ export const advisors: Array<{
     avatar: "/team/monisha-perkash.jpg"
   },
   {
-    name: "Assaf Einat",
-    tagline: "Founder @ Boom Entertainment; 20 yrs in tech, product & biz; Stanford MBA / CS BS",
-    linkedin: "https://www.linkedin.com/in/assafeinat",
-    avatar: "/team/assaf-einat.jpg"
-  },
-  {
     name: "Shreeganesh Ramanan",
     tagline: "20 yrs software @ Microsoft, Amazon, Apple; early Optimizely; UIUC CS",
     linkedin: "https://www.linkedin.com/in/shreeganesh",
     avatar: "/team/shreeganesh-ramanan.jpg"
   },
   {
+    name: "Assaf Einat",
+    tagline: "Founder @ Boom Entertainment; 20 yrs in tech, product & biz; Stanford MBA / CS BS",
+    linkedin: "https://www.linkedin.com/in/assafeinat",
+    avatar: "/team/assaf-einat.jpg"
+  },
+  {
+    name: "Kathy Wang",
+    tagline: "Product designer (ex-Dropbox, IBM); Cornell MPS Info Sci (UX); Red Dot ‘Best of the Best’ award",
+    linkedin: "https://www.linkedin.com/in/kathytwang/",
+    avatar: "/team/kathy-wang.jpg"
+  },
+  {
+    name: "Andrew Scheuermann",
+    tagline: "Deep-tech founder & operator; Stanford PhD (Materials Science)",
+    linkedin: "https://www.linkedin.com/in/andrewscheuermann/",
+    avatar: "/team/andrew-scheuermann.jpg"
+  },
+  {
     name: "Sophie Vu",
     tagline: "Marketing & GTM exec (3× acquired); BroadVision, Google, Hootsuite, Unbabel; UCLA Anderson MBA",
     linkedin: "https://www.linkedin.com/in/sophie-vu415",
     avatar: "/team/sophie-vu.jpg"
+  },
+  {
+    name: "Shawn Kung",
+    tagline: "AI infra & data systems founder-operator; ex-Google Cloud ML platform",
+    linkedin: "https://www.linkedin.com/in/shawnkung/",
+    avatar: "/team/shawn-kung.jpg"
   },
   {
     name: "Arisa Makihara",
@@ -88,18 +106,6 @@ export const advisors: Array<{
     avatar: "/team/ed-kim.jpg"
   },
   {
-    name: "Kathy Wang",
-    tagline: "Product designer (ex-Dropbox, IBM); Cornell MPS Info Sci (UX); Red Dot ‘Best of the Best’ award",
-    linkedin: "https://www.linkedin.com/in/kathytwang/",
-    avatar: "/team/kathy-wang.jpg"
-  },
-  {
-    name: "Andrew Scheuermann",
-    tagline: "Deep-tech founder & operator; Stanford PhD (Materials Science)",
-    linkedin: "https://www.linkedin.com/in/andrewscheuermann/",
-    avatar: "/team/andrew-scheuermann.jpg"
-  },
-  {
     name: "Ben Peters",
     tagline: "Product & growth advisor; former product lead at Google and Dropbox",
     linkedin: "https://www.linkedin.com/in/ben-peters-6ba44ab",
@@ -122,12 +128,6 @@ export const advisors: Array<{
     tagline: "Product design & UX mentor; founder & creative director background",
     linkedin: "https://www.linkedin.com/in/evonnejohnson/",
     avatar: "/team/evonne-johnson.jpg"
-  },
-  {
-    name: "Shawn Kung",
-    tagline: "AI infra & data systems founder-operator; ex-Google Cloud ML platform",
-    linkedin: "https://www.linkedin.com/in/shawnkung/",
-    avatar: "/team/shawn-kung.jpg"
   },
   {
     name: "Adria Hou",

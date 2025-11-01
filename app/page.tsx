@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { Container, PrimaryCTA, SecondaryCTA, Card, SectionTitle, StatsRow } from '@/components/Blocks'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home(){
   return (
@@ -86,7 +87,15 @@ export default function Home(){
                   &ldquo;Inception gave us that initial push to get over the &apos;activation energy&apos; required... Our company would not exist without Inception.&rdquo;
                 </blockquote>
                 <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-full bg-gradient-to-tr from-teal-400 to-cyan-500 flex-shrink-0"></div>
+                  <div className="relative h-12 w-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-white/10">
+                    <Image
+                      src="/team/andy-chou.jpg"
+                      alt="Andy Chou"
+                      fill
+                      className="object-cover"
+                      sizes="48px"
+                    />
+                  </div>
                   <div>
                     <div className="font-semibold text-white">Andy Chou</div>
                     <div className="text-sm text-neutral-300 mt-1">Founder & CEO, Ventrilo (raised $10M from a16z)</div>
