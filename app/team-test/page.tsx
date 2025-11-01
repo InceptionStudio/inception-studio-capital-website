@@ -139,7 +139,7 @@ export default function TeamTestPage() {
                       <h3 className="text-lg font-semibold text-white mb-2">Inception Studio impact</h3>
                       <p className="leading-relaxed text-sm">
                         In 2022, John launched Inception Studio to give experienced founders the focused, zero-equity support they need.
-                        The community has now welcomed 219 founders who have started 40 companies and raised over $152M, with trust built
+                        The community has now welcomed 235 founders who have started 42 companies and raised over $164M, with trust built
                         before any capital is deployed.
                       </p>
                     </div>
