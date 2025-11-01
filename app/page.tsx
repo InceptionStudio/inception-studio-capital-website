@@ -38,7 +38,7 @@ export default function Home(){
               </div>
               <div className="relative">
                 <div className="aspect-square rounded-3xl overflow-hidden ring-1 ring-white/10 shadow-2xl bg-neutral-900 relative">
-                  <Image src="/Cohort.7.jpg" alt="Inception retreat" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                  <Image src="/PXL_20231110_021550370.jpg" alt="Inception retreat" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div className="absolute -bottom-6 -left-6 hidden sm:block">
                   <div className="rounded-2xl bg-white/5 backdrop-blur px-4 py-3 ring-1 ring-white/10 text-xs">Zero‑equity retreats → privileged access</div>
