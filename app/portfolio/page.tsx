@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Page(){
   const companies = [
     {name:'Ventrilo', blurb:'AI-powered writing assistant. $10M from a16z after forming team & demo at Inception.', logo:'/logos/ventrilo.png', url:'https://ventrilo.ai'},
-    {name:'mem0', blurb:'Cross-platform memory layer for LLMs. $20M Series A. 40K+ stars on GitHub.', logo:'/logos/mem0.svg', url:'https://mem0.ai'},
+    {name:'mem0', blurb:'Cross-platform memory layer for LLMs. $20M Series A. 40K+ stars on GitHub.', logo:'/logos/mem0.png', url:'https://mem0.ai'},
     {name:'TextClub', blurb:'In stealth. Founded by Deyan Vitanov: Stanford MBA, 4x founder (3 acquired), CMO at gaming unicorn Playco.'},
     {name:'Coframe', blurb:'AI‑driven UX optimization. $9M from Khosla Ventures.', logo:'/logos/coframe.jpg', url:'https://coframe.ai'},
     {name:'Scorecard', blurb:'Evaluate, optimize, and ship enterprise AI agents.', logo:'/logos/scorecard.png', url:'https://scorecard.io'},

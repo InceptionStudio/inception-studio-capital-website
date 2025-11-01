@@ -306,7 +306,7 @@ export default function Home(){
                 >
                   <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
                     <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
-                      <img src="/logos/mem0.svg" alt="mem0 logo" className="h-full w-full object-contain"/>
+                      <img src="/logos/mem0.png" alt="mem0 logo" className="h-full w-full object-contain"/>
                     </div>
                     <div className="flex-1">
                       <div className="mb-4">
