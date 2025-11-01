@@ -145,23 +145,40 @@ export const advisors: Array<{
 
 // --- Card component ---
 function AdvisorCard({ name, tagline, avatar, linkedin }: (typeof advisors)[number]) {
-  return (
-    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm backdrop-blur transition hover:shadow-md hover:bg-white/10">
-      <div className="flex items-center gap-4">
-        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full bg-white/10">
-          {avatar ? (
-            <Image src={avatar} alt={name} fill sizes="56px" className="object-cover" />
-          ) : (
-            <div className="flex h-full w-full items-center justify-center text-sm text-neutral-400">
-              {name.split(" ").map(n=>n[0]).slice(0,2).join("")}
-            </div>
-          )}
-        </div>
-        <div className="min-w-0 flex-1">
-          <div className="truncate text-base font-semibold leading-6 text-white">{name}</div>
-          {tagline && <p className="mt-0.5 truncate text-sm text-neutral-300">{tagline}</p>}
-        </div>
+  const content = (
+    <div className="flex items-start gap-5">
+      <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full bg-white/10">
+        {avatar ? (
+          <Image src={avatar} alt={name} fill sizes="80px" className="object-cover" />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center text-lg text-neutral-400">
+            {name.split(" ").map(n=>n[0]).slice(0,2).join("")}
+          </div>
+        )}
       </div>
+      <div className="min-w-0 flex-1">
+        <div className="text-xl font-semibold leading-7 text-white">{name}</div>
+        {tagline && <p className="mt-2 text-sm text-neutral-300 leading-relaxed line-clamp-3">{tagline}</p>}
+      </div>
+    </div>
+  );
+
+  if (linkedin) {
+    return (
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 shadow-sm backdrop-blur transition hover:shadow-md hover:bg-white/10 hover:border-white/20"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 shadow-sm backdrop-blur transition">
+      {content}
     </div>
   );
 }
@@ -210,12 +227,12 @@ function AutoScrollCarousel({ items }: { items: (typeof advisors) }) {
     <div className="relative overflow-hidden">
       <div
         ref={rowRef}
-        className="flex gap-4 overflow-x-hidden pb-2 pt-1"
+        className="flex gap-6 overflow-x-hidden pb-2 pt-1"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {/* Duplicate items for seamless loop */}
         {[...items, ...items, ...items].map((advisor, idx) => (
-          <div key={`${advisor.name}-${idx}`} className="w-80 shrink-0">
+          <div key={`${advisor.name}-${idx}`} className="w-[28rem] shrink-0">
             <AdvisorCard {...advisor} />
           </div>
         ))}
@@ -227,7 +244,7 @@ function AutoScrollCarousel({ items }: { items: (typeof advisors) }) {
   );
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <Row items={row1Items} rowRef={row1Ref} />
       <Row items={row2Items} rowRef={row2Ref} />
       <Row items={row3Items} rowRef={row3Ref} />
