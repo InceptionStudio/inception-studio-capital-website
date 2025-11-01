@@ -80,8 +80,8 @@ function AutoScrollCarousel({ items }: { items: (typeof advisors) }) {
     };
 
     const cleanup1 = animateScroll(row1Ref.current, 1);
-    const cleanup2 = animateScroll(row2Ref.current, -0.8);
-    const cleanup3 = animateScroll(row3Ref.current, 1.2);
+    const cleanup2 = animateScroll(row2Ref.current, 0.6);
+    const cleanup3 = animateScroll(row3Ref.current, 1.3);
 
     return () => {
       cleanup1?.();
