@@ -171,8 +171,8 @@ export default function Home(){
                   <SecondaryCTA href="/thesis">Read the full thesis</SecondaryCTA>
                 </div>
               </div>
-              <div className="aspect-[4/3] overflow-hidden rounded-3xl ring-1 ring-white/10">
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto=format&fit=crop" alt="Workshop" className="h-full w-full object-cover"/>
+              <div className="aspect-[4/3] overflow-hidden rounded-3xl ring-1 ring-white/10 relative">
+                <Image src="/20240625-DSCF5201.jpg" alt="Inception retreat" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
             </div>
           </Container>
