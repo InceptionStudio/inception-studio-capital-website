@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import { Container } from '@/components/Blocks'
 import { Award, Linkedin, Mail, Phone } from 'lucide-react'
 import Link from 'next/link'
+import AdvisorsSection from '@/components/AdvisorsSection'
 
 const highlightIconClass = 'h-5 w-5 text-teal-300'
 const contactLinkClass = 'flex items-center gap-2 text-neutral-300 hover:text-white transition-colors'
@@ -176,6 +177,8 @@ export default function TeamPage() {
             </div>
           </Container>
         </section>
+
+        <AdvisorsSection />
       </main>
       <Footer />
     </>
