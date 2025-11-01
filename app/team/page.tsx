@@ -108,7 +108,7 @@ export default function TeamPage() {
                       'Adjunct Lecturer at Stanford (Compilers & Building with LLMs)',
                       'Named to Forbes AI 50',
                       'Best paper awards at PLDI, ISSTA, and OOPSLA',
-                      'Authored the compilers chapter in the iconic “Dragon Book”'
+                      'His seminal work on compilers and program analysis formed the basis of Chapter 12 of Compilers: Principles, Techniques, and Tools (the "Dragon Book"), which is the standard textbook for compiler education'
                     ]}
                   />
                   <Highlight
