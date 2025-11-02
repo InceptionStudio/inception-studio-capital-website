@@ -205,7 +205,7 @@ export default function TeamTestPage() {
         <AdvisorsSection />
 
         {/* CTA SECTION */}
-        <section className="py-10 border-t border-white/5 bg-gradient-to-r from-teal-950/40 to-cyan-950/40">
+        <section className="py-10 border-t border-white/5" style={{background: 'linear-gradient(to right, rgba(221, 66, 24, 0.15), rgba(139, 33, 12, 0.15))'}}>
           <Container className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <div className="text-lg font-semibold">Ready to invest in the next generation of AI founders?</div>

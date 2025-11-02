@@ -20,7 +20,7 @@ export default function Home(){
               <div>
                 <p className="eyebrow">Silicon Valley • AI‑native • Zero‑equity funnel</p>
                 <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-                  Backing the most <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-400">experienced AI founders</span> from day zero.
+                  Backing the most <span className="text-transparent bg-clip-text" style={{backgroundImage: 'linear-gradient(to right, #ff6b4a, #dd4218)'}}>experienced AI founders</span> from day zero.
                 </h1>
                 <p className="mt-4 text-neutral-300 max-w-xl">We built the Bay Area’s most selective zero‑equity founder community. Our fund takes first‑money positions and follows winners—with privileged access others can’t get.</p>
                 <div className="mt-6 flex flex-wrap gap-3">
@@ -413,7 +413,7 @@ export default function Home(){
         </section>
 
         {/* COMMIT STRIP */}
-        <section className="py-10 border-t border-white/5 bg-gradient-to-r from-teal-950/40 to-cyan-950/40">
+        <section className="py-10 border-t border-white/5" style={{background: 'linear-gradient(to right, rgba(221, 66, 24, 0.15), rgba(139, 33, 12, 0.15))'}}>
           <Container className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <div className="text-lg font-semibold">Allocations are limited for Fund I.</div>
