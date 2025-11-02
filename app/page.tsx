@@ -12,15 +12,15 @@ export default function Home(){
         {/* HERO */}
         <section className="relative overflow-hidden" id="top">
           <div className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-teal-500/10 blur-3xl"/>
-            <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl"/>
+            <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-brand-500/10 blur-3xl"/>
+            <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-brand-600/10 blur-3xl"/>
           </div>
           <Container className="py-16 md:py-24">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <p className="eyebrow">Silicon Valley • AI‑native • Zero‑equity funnel</p>
                 <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-                  Backing the most <span className="text-transparent bg-clip-text" style={{backgroundImage: 'linear-gradient(to right, #ff6b4a, #dd4218)'}}>experienced AI founders</span> from day zero.
+                  Backing the most <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-500">experienced AI founders</span> from day zero.
                 </h1>
                 <p className="mt-4 text-neutral-300 max-w-xl">We built the Bay Area’s most selective zero‑equity founder community. Our fund takes first‑money positions and follows winners—with privileged access others can’t get.</p>
                 <div className="mt-6 flex flex-wrap gap-3">
@@ -61,21 +61,21 @@ export default function Home(){
               <Card>
                 <div className="p-8">
                   <div className="text-4xl mb-4">🎯</div>
-                  <h3 className="text-lg font-bold text-teal-300 mb-3">Zero Equity Model</h3>
+                  <h3 className="text-lg font-bold text-brand-400 mb-3">Zero Equity Model</h3>
                   <p className="text-neutral-300 leading-relaxed">Our non-profit accelerator takes 0% equity, attracting founders who would never join YC or traditional programs.</p>
                 </div>
               </Card>
               <Card>
                 <div className="p-8">
                   <div className="text-4xl mb-4">⚡</div>
-                  <h3 className="text-lg font-bold text-teal-300 mb-3">3-Day Retreats</h3>
+                  <h3 className="text-lg font-bold text-brand-400 mb-3">3-Day Retreats</h3>
                   <p className="text-neutral-300 leading-relaxed">Not a 3-month program. Experienced founders need focus and deadlines, not basic startup education.</p>
                 </div>
               </Card>
               <Card>
                 <div className="p-8">
                   <div className="text-4xl mb-4">🚀</div>
-                  <h3 className="text-lg font-bold text-teal-300 mb-3">First Money In</h3>
+                  <h3 className="text-lg font-bold text-brand-400 mb-3">First Money In</h3>
                   <p className="text-neutral-300 leading-relaxed">We invest at formation, before anyone else. Best terms, privileged access to elite founders.</p>
                 </div>
               </Card>
@@ -110,7 +110,7 @@ export default function Home(){
         {/* OUR EDGE */}
         <section className="py-16 md:py-24 border-t border-white/5 relative overflow-hidden" id="edge">
           <div className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-teal-500/5 blur-3xl"/>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-brand-500/5 blur-3xl"/>
           </div>
           <Container>
             <div className="text-center max-w-3xl mx-auto mb-12">
@@ -121,7 +121,7 @@ export default function Home(){
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <div className="space-y-6 text-neutral-300 leading-relaxed">
                 <div>
-                  <h3 className="text-lg font-bold text-teal-300 mb-3">No Adverse Selection</h3>
+                  <h3 className="text-lg font-bold text-brand-400 mb-3">No Adverse Selection</h3>
                   <p>Every accelerator takes equity. The best founders have better options, so they don&apos;t participate. This creates adverse selection.</p>
                 </div>
                 <div>
@@ -145,7 +145,7 @@ export default function Home(){
                 ].map((m, i)=> (
                   <Card key={i}>
                     <div className="p-4">
-                      <div className="text-3xl font-extrabold text-teal-300 tracking-tight">{m.kpi}</div>
+                      <div className="text-3xl font-extrabold text-brand-400 tracking-tight">{m.kpi}</div>
                       <div className="mt-2 text-neutral-300 text-sm">{m.label}</div>
                     </div>
                   </Card>
@@ -162,9 +162,9 @@ export default function Home(){
               <div className="space-y-4">
                 <SectionTitle eyebrow="Our Thesis" title="Simple thesis, powerful edge"/>
                 <ul className="space-y-3 text-neutral-300">
-                  <li className="flex gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-teal-300"></span><span><strong>Experienced founders win.</strong> They’re 1.6–2.0× likelier to produce outsized outcomes and raise more with less dilution.</span></li>
-                  <li className="flex gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-teal-300"></span><span><strong>Zero‑equity top‑of‑funnel.</strong> Our 72‑hour retreats attract elite repeat founders who avoid traditional accelerators.</span></li>
-                  <li className="flex gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-teal-300"></span><span><strong>Own the earliest allocation.</strong> $100k starters at formation, then $500k–$1.5M into validated winners, with MFN & pro‑rata.</span></li>
+                  <li className="flex gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-brand-400"></span><span><strong>Experienced founders win.</strong> They&apos;re 1.6–2.0× likelier to produce outsized outcomes and raise more with less dilution.</span></li>
+                  <li className="flex gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-brand-400"></span><span><strong>Zero‑equity top‑of‑funnel.</strong> Our 72‑hour retreats attract elite repeat founders who avoid traditional accelerators.</span></li>
+                  <li className="flex gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-brand-400"></span><span><strong>Own the earliest allocation.</strong> $100k starters at formation, then $500k–$1.5M into validated winners, with MFN & pro‑rata.</span></li>
                 </ul>
                 <div className="pt-2 flex gap-3">
                   <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
@@ -206,7 +206,7 @@ export default function Home(){
                         <div className="text-sm text-neutral-400 mt-1">AI-powered quality for developers</div>
                       </div>
                       <div className="mb-4">
-                        <div className="text-sm font-semibold text-teal-300">Andy Chou</div>
+                        <div className="text-sm font-semibold text-brand-400">Andy Chou</div>
                         <p className="text-sm text-neutral-300 mt-1">Stanford PhD, Coverity Founder/CTO (acq. by Synopsys for $350M)</p>
                       </div>
                       <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
@@ -242,7 +242,7 @@ export default function Home(){
                         <div className="text-sm text-neutral-400 mt-1">Automatically refine UX with AI</div>
                       </div>
                       <div className="mb-4">
-                        <div className="text-sm font-semibold text-teal-300">Josh Payne</div>
+                        <div className="text-sm font-semibold text-brand-400">Josh Payne</div>
                         <p className="text-sm text-neutral-300 mt-1">2x Stanford dropout, Founder Autograph (unicorn), AccessBell (acquired)</p>
                       </div>
                       <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
@@ -278,7 +278,7 @@ export default function Home(){
                         <div className="text-sm text-neutral-400 mt-1">Unlocking AI for healthcare</div>
                       </div>
                       <div className="mb-4">
-                        <div className="text-sm font-semibold text-teal-300">Elad Ferber &amp; Jan Jannick</div>
+                        <div className="text-sm font-semibold text-brand-400">Elad Ferber &amp; Jan Jannick</div>
                         <p className="text-sm text-neutral-300 mt-1">Founder Spry Health; Stanford PhD, Founder imeem and VoiceBase</p>
                       </div>
                       <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
@@ -314,7 +314,7 @@ export default function Home(){
                         <div className="text-sm text-neutral-400 mt-1">Cross-platform memory for LLMs</div>
                       </div>
                       <div className="mb-4">
-                        <div className="text-sm font-semibold text-teal-300">Taranjeet Singh &amp; Deshraj Yadav</div>
+                        <div className="text-sm font-semibold text-brand-400">Taranjeet Singh &amp; Deshraj Yadav</div>
                         <p className="text-sm text-neutral-300 mt-1">First GPT Store (400K MAU), Led AI Platform at Tesla</p>
                       </div>
                       <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
@@ -350,7 +350,7 @@ export default function Home(){
                         <div className="text-sm text-neutral-400 mt-1">AI that remembers everything</div>
                       </div>
                       <div className="mb-4">
-                        <div className="text-sm font-semibold text-teal-300">Kelly Peng</div>
+                        <div className="text-sm font-semibold text-brand-400">Kelly Peng</div>
                         <p className="text-sm text-neutral-300 mt-1">UC Berkeley EECS, MIT EECS, 15+ patents, Forbes 30u30</p>
                       </div>
                       <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
@@ -386,7 +386,7 @@ export default function Home(){
                         <div className="text-sm text-neutral-400 mt-1">AI toxicity platform replacing animal testing</div>
                       </div>
                       <div className="mb-4">
-                        <div className="text-sm font-semibold text-teal-300">Brandon White &amp; Alex Beatson</div>
+                        <div className="text-sm font-semibold text-brand-400">Brandon White &amp; Alex Beatson</div>
                         <p className="text-sm text-neutral-300 mt-1">Beatson, ex-Director of ML at Redesign Science, Princeton PhD in generative models, and 2× Scale AI GenAI hackathon runner-up</p>
                       </div>
                       <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
@@ -413,7 +413,7 @@ export default function Home(){
         </section>
 
         {/* COMMIT STRIP */}
-        <section className="py-10 border-t border-white/5" style={{background: 'linear-gradient(to right, rgba(221, 66, 24, 0.15), rgba(139, 33, 12, 0.15))'}}>
+        <section className="py-10 border-t border-white/5 bg-gradient-to-r from-brand-500/15 to-brand-800/15">
           <Container className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <div className="text-lg font-semibold">Allocations are limited for Fund I.</div>

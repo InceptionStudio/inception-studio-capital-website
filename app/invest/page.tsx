@@ -49,7 +49,7 @@ export default function Page(){
                 <p>On the next page, you can review the fund&apos;s offering documents and finish the investor application if you&apos;re ready to move forward.</p>
 
                 <p>If you have any questions about this process please contact us at{' '}
-                  <a href="mailto:invest@inceptionstudio.capital" className="text-teal-300 hover:text-teal-200 underline">
+                  <a href="mailto:invest@inceptionstudio.capital" className="text-brand-400 hover:text-brand-300 underline">
                     invest@inceptionstudio.capital
                   </a>{' '}
                   or schedule a no-obligation appointment with a Partner{' '}
@@ -57,7 +57,7 @@ export default function Page(){
                     href="https://app-na2.hubspot.com/meetings/inception/fund1-info"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-teal-300 hover:text-teal-200 underline"
+                    className="text-brand-400 hover:text-brand-300 underline"
                   >
                     here
                   </a>.

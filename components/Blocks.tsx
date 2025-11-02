@@ -36,7 +36,7 @@ export function StatsRow(){
   return (
     <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
       {items.map(({icon:Icon, label})=> (
-        <div key={label} className="stat"><Icon className="h-4 w-4 text-teal-300"/> {label}</div>
+        <div key={label} className="stat"><Icon className="h-4 w-4 text-brand-400"/> {label}</div>
       ))}
     </div>
   )

@@ -48,9 +48,9 @@ export default function Page(){
                   <ArrowRight className="h-4 w-4 transition-transform group-open:rotate-90"/>
                 </summary>
                 <p className="mt-3 text-neutral-300">
-                  <Link href="/invest" className="text-teal-300 hover:text-teal-200 underline">Complete the investment form</Link> to confirm accredited investor status and review offering documents. Email{' '}
-                  <a href="mailto:invest@inceptionstudio.capital" className="text-teal-300 hover:text-teal-200 underline">invest@inceptionstudio.capital</a> or{' '}
-                  <a href="https://meetings-na2.hubspot.com/inception/fund1-info" target="_blank" rel="noopener noreferrer" className="text-teal-300 hover:text-teal-200 underline">schedule a no-obligation call with a Partner</a>. We also host Demo Days where you can see founders and companies firsthand.
+                  <Link href="/invest" className="text-brand-400 hover:text-brand-300 underline">Complete the investment form</Link> to confirm accredited investor status and review offering documents. Email{' '}
+                  <a href="mailto:invest@inceptionstudio.capital" className="text-brand-400 hover:text-brand-300 underline">invest@inceptionstudio.capital</a> or{' '}
+                  <a href="https://meetings-na2.hubspot.com/inception/fund1-info" target="_blank" rel="noopener noreferrer" className="text-brand-400 hover:text-brand-300 underline">schedule a no-obligation call with a Partner</a>. We also host Demo Days where you can see founders and companies firsthand.
                 </p>
               </details>
             </div>

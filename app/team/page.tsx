@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AdvisorsSection from '@/components/AdvisorsSection'
 
-const highlightIconClass = 'h-5 w-5 text-teal-300'
+const highlightIconClass = 'h-5 w-5 text-brand-400'
 const contactLinkClass = 'flex items-center gap-2 text-neutral-300 hover:text-white transition-colors'
 
 function ContactLinks({
@@ -98,7 +98,7 @@ export default function TeamPage() {
                     />
                   </div>
                   <h2 className="text-3xl font-bold text-white">John Whaley</h2>
-                  <p className="text-lg text-teal-300 mb-6">Co-Founder &amp; Managing Partner</p>
+                  <p className="text-lg text-brand-400 mb-6">Co-Founder &amp; Managing Partner</p>
                   <ContactLinks
                     email="john@inceptionstudio.org"
                     linkedin="https://linkedin.com/in/joewhaley"
@@ -154,7 +154,7 @@ export default function TeamPage() {
                     />
                   </div>
                   <h2 className="text-3xl font-bold text-white">Mike Morris</h2>
-                  <p className="text-lg text-teal-300 mb-6">Co-Founder &amp; Managing Partner</p>
+                  <p className="text-lg text-brand-400 mb-6">Co-Founder &amp; Managing Partner</p>
                   <ContactLinks
                     email="mike@inceptionstudio.org"
                     linkedin="https://www.linkedin.com/in/mikemorris7/"
@@ -198,7 +198,7 @@ export default function TeamPage() {
         <AdvisorsSection />
 
         {/* CTA SECTION */}
-        <section className="py-10 border-t border-white/5" style={{background: 'linear-gradient(to right, rgba(221, 66, 24, 0.15), rgba(139, 33, 12, 0.15))'}}>
+        <section className="py-10 border-t border-white/5 bg-gradient-to-r from-brand-500/15 to-brand-800/15">
           <Container className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <div className="text-lg font-semibold">Ready to invest in the next generation of AI founders?</div>
