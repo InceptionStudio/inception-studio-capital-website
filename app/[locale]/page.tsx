@@ -256,7 +256,7 @@ export default async function Home({
                 >
                   <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
                     <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
-                      <img src="/logos/ventrilo.png" alt="Ventrilo logo" className="h-full w-full object-contain"/>
+                      <Image src="/logos/ventrilo.png" alt="Ventrilo logo" width={48} height={48} className="h-full w-full object-contain"/>
                     </div>
                     <div className="flex-1">
                       <div className="mb-4">
@@ -292,7 +292,7 @@ export default async function Home({
                 >
                   <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
                     <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
-                      <img src="/logos/coframe.jpg" alt="Coframe logo" className="h-full w-full object-contain"/>
+                      <Image src="/logos/coframe.jpg" alt="Coframe logo" width={48} height={48} className="h-full w-full object-contain"/>
                     </div>
                     <div className="flex-1">
                       <div className="mb-4">
@@ -328,7 +328,7 @@ export default async function Home({
                 >
                   <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
                     <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
-                      <img src="/logos/synthpop.png" alt="SynthPop logo" className="h-full w-full object-contain"/>
+                      <Image src="/logos/synthpop.png" alt="SynthPop logo" width={48} height={48} className="h-full w-full object-contain"/>
                     </div>
                     <div className="flex-1">
                       <div className="mb-4">
@@ -364,7 +364,7 @@ export default async function Home({
                 >
                   <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
                     <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
-                      <img src="/logos/mem0.png" alt="mem0 logo" className="h-full w-full object-contain"/>
+                      <Image src="/logos/mem0.png" alt="mem0 logo" width={48} height={48} className="h-full w-full object-contain"/>
                     </div>
                     <div className="flex-1">
                       <div className="mb-4">
@@ -400,7 +400,7 @@ export default async function Home({
                 >
                   <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
                     <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
-                      <img src="/logos/first-intelligence.png" alt="First Intelligence logo" className="h-full w-full object-contain"/>
+                      <Image src="/logos/first-intelligence.png" alt="First Intelligence logo" width={48} height={48} className="h-full w-full object-contain"/>
                     </div>
                     <div className="flex-1">
                       <div className="mb-4">
@@ -436,7 +436,7 @@ export default async function Home({
                 >
                   <div className="p-6 flex flex-col gap-4 sm:flex-row sm:items-start">
                     <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center p-1">
-                      <img src="/logos/axiom.png" alt="AxiomBio logo" className="h-full w-full object-contain"/>
+                      <Image src="/logos/axiom.png" alt="AxiomBio logo" width={48} height={48} className="h-full w-full object-contain"/>
                     </div>
                     <div className="flex-1">
                       <div className="mb-4">

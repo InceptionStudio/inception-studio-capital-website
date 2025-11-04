@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import LangSwitch from './LangSwitch'
 import type { Locale } from '@/app/[locale]/layout'
 
@@ -35,7 +36,7 @@ export default function Nav({ locale, labels = defaultLabels }: { locale?: Local
       <div className="container-max">
         <div className="flex h-16 items-center justify-between">
           <Link href={`${prefix}/`} className="flex items-center gap-3">
-            <img src="/inception-logo.png" alt="Inception Studio Capital" className="h-8 w-auto" />
+            <Image src="/inception-logo.png" alt="Inception Studio Capital" width={160} height={40} className="h-8 w-auto" priority />
             <span className="font-semibold tracking-tight">Inception Studio Capital</span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm">

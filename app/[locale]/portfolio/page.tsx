@@ -1,9 +1,17 @@
 import Footer from '@/components/Footer'
 import { Container, SectionTitle, Card } from '@/components/Blocks'
 import Link from 'next/link'
+import Image from 'next/image'
 import kpis from '@/data/kpis.json' assert { type: 'json' }
 
-export default function Page(){
+type Locale = 'en' | 'ja'
+
+export default function Page({
+  params: { locale }
+}: {
+  params: { locale: Locale }
+}){
+  const prefix = locale ? `/${locale}` : ''
   const companies = [
     {name:'Ventrilo', blurb:'AI-powered writing assistant. $10M from a16z after forming team & demo at Inception.', logo:'/logos/ventrilo.png', url:'https://ventrilo.ai'},
     {name:'mem0', blurb:'Cross-platform memory layer for LLMs. $20M Series A. 40K+ stars on GitHub.', logo:'/logos/mem0.png', url:'https://mem0.ai'},
@@ -45,9 +53,11 @@ export default function Page(){
                   <div className="p-6 flex gap-4">
                     <div className={`h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl ${company.logoBg ?? 'bg-white/10'} ring-1 ring-white/10 flex items-center justify-center p-1`}>
                       {company.logo ? (
-                        <img
+                        <Image
                           src={company.logo}
                           alt={`${company.name} logo`}
+                          width={48}
+                          height={48}
                           className="h-full w-full object-contain"
                         />
                       ) : (
@@ -82,17 +92,19 @@ export default function Page(){
             </div>
             <div className="mt-10 space-y-6">
               <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <img
+                <Image
                   src="/investor-logos.svg"
                   alt="Logos of venture funds that have invested alongside Inception"
-                  className="w-full"
+                  width={1024}
+                  height={256}
+                  className="w-full h-auto"
                 />
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/5 px-6 py-5">
                 <p className="text-base text-neutral-100">
                   Want to invest in these companies and more?
                 </p>
-                <Link href="/invest" className="btn btn-primary">
+                <Link href={`${prefix}/invest`} className="btn btn-primary">
                   Invest with us
                 </Link>
               </div>
