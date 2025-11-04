@@ -3,60 +3,118 @@ import { Container, PrimaryCTA, SectionTitle } from '@/components/Blocks'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import kpis from '@/data/kpis.json' assert { type: 'json' }
+import { getDictionary } from '@/lib/i18n'
 
-export default function Page(){
-  const items = [
-    {q:'What is Inception Studio Capital?', a:`We're a venture fund backing experienced AI founders from day zero. We built Inception Studio, the most selective founder community in Silicon Valley, specifically to attract high-quality repeat entrepreneurs who avoid traditional accelerators. ${kpis.foundersParticipated} founders have participated, ${kpis.repeatFounders} are repeat founders, and ${kpis.repeatFoundersWithExit} have prior successful exits.`},
-    {q:'What makes your access unique?', a:'Our zero‑equity retreats eliminate adverse selection—the best founders join because there\'s no downside. We build trust before investing, so we consistently secure early allocation with MFN and pro‑rata rights. We see and invest in companies at formation stage, often pre-product, getting privileged access other investors can\'t access.'},
-    {q:'How do you deploy capital?', a:'First money in. Double down on the ones that take off. ~$100k starter checks in ~40 companies at incorporation (1–2% target ownership), then $500k–$1.5M core positions in ~12 companies with strong traction (2.5–10% ownership). We secure MFN and pro‑rata rights on every investment to follow our winners.'},
-    {q:'Who are the General Partners?', a:'John Whaley: Stanford PhD (Best Thesis Award), MIT undergrad, Forbes AI 50, teaches at Stanford CS. Serial entrepreneur with 3 companies including UnifyID. Mike Morris: 28‑year Silicon Valley veteran with 3 acquisitions + 1 IPO, early at VMware. Combined 50+ years of experience building and scaling AI companies.'},
-    {q:'What are the fund terms?', a:'10‑year term (with up to two 1‑year extensions), 2% management fee, 20% carry, $250K minimum commitment, 25% initial capital call. We focus exclusively on AI-native companies.'},
-    {q:'What kind of founders do you attract?', a:`Experienced technical founders: ${kpis.repeatFounders} repeat entrepreneurs, ${kpis.repeatFoundersWithExit} with prior successful exits, ${kpis.averageIndustryExperience} average industry experience, ${kpis.founderNps} NPS score, ${kpis.founderReferralRate} referred by other founders. These are founders who would never join traditional accelerators but value our zero-equity model for co-founder matching and focused environment.`},
-    {q:'What portfolio results have you achieved?', a:`${kpis.numberCompaniesRaised} companies founded through Inception have raised ${kpis.companiesTotalRaised}+ in follow-on funding. Notable outcomes include: Mem0 ($20M Series A), Ventrilo ($10M from a16z), Coframe ($9M from Khosla), and Alex AI (acquired by OpenAI in August 2025). Multiple companies achieving significant valuation increases.`},
-    {q:'Why do experienced founders choose Inception?', a:'They face unique challenges: highly selective about co-founders, networks may have aged out, traditional accelerators don\'t make sense (7% for $125K?), and they need a deadline to get started. Our 3-day zero-equity retreats solve these problems while providing community, advisory, recruiting, and fundraising support.'},
-    {q:'What is the relationship between Inception Studio and Inception Studio Capital?', a:'Inception Studio is a 501(c)(3) nonprofit that runs zero-equity 3-day retreats for experienced AI founders. The nonprofit takes no equity and charges no fees—it exists purely to help founders start their next company. Inception Studio Capital is a separate for-profit venture fund that invests in companies formed through the program. This separation is critical: because the nonprofit takes zero equity, it eliminates adverse selection and attracts the highest-quality founders who would never join traditional accelerators.'},
-  ]
+const SUPPORTED_LOCALES = ['en', 'ja'] as const
+
+export default async function Page({
+  params: { locale }
+}: {
+  params: { locale: typeof SUPPORTED_LOCALES[number] }
+}) {
+  const currentLocale = SUPPORTED_LOCALES.includes(locale) ? locale : 'en'
+  const dict = await getDictionary(currentLocale, 'faq', 'common')
+  const faq = dict.faq
+  const metrics = dict.common?.metrics ?? {}
+
+  const prefix = `/${currentLocale}`
+
+  const replacements: Record<string, string> = {
+    foundersParticipated: kpis.foundersParticipated,
+    repeatFounders: kpis.repeatFounders,
+    repeatFoundersWithExit: kpis.repeatFoundersWithExit,
+    founderNps: kpis.founderNps,
+    founderReferralRate: kpis.founderReferralRate,
+    numberCompaniesRaised: kpis.numberCompaniesRaised,
+    companiesTotalRaised: kpis.companiesTotalRaised,
+    averageIndustryExperience: kpis.averageIndustryExperience
+  }
+
+  const replaceTokens = (input: string) =>
+    input.replace(/{{(.*?)}}/g, (_, key) => replacements[key.trim()] ?? '')
+
+  const formatRichText = (input: string) => ({
+    __html: replaceTokens(input).replace(/\n/g, '<br/>')
+  })
+
+  const resolveHref = (href: string) => {
+    if (href.startsWith('http') || href.startsWith('mailto:')) {
+      return href
+    }
+    return `${prefix}${href}`
+  }
+
+  const renderCTA = () => {
+    if (!faq.cta) return null
+    const target = faq.cta.newTab ? '_blank' : undefined
+    const rel = faq.cta.newTab ? 'noopener noreferrer' : undefined
+    return (
+      <PrimaryCTA href={resolveHref(faq.cta.href)} target={target} rel={rel}>
+        {faq.cta.label}
+      </PrimaryCTA>
+    )
+  }
+
+  const renderClosingSegment = (segment: any, index: number) => {
+    if (segment.type === 'text') {
+      return (
+        <span
+          key={`closing-text-${index}`}
+          dangerouslySetInnerHTML={formatRichText(segment.value)}
+        />
+      )
+    }
+    const link = faq.closing.links[segment.key]
+    const href = resolveHref(link.href)
+    const target = link.newTab ? '_blank' : undefined
+    const rel = link.newTab ? 'noopener noreferrer' : undefined
+    if (href.startsWith('http') || href.startsWith('mailto:')) {
+      return (
+        <a key={`closing-link-${segment.key}-${index}`} href={href} target={target} rel={rel} className="text-teal-300 hover:text-teal-200 underline">
+          {link.label}
+        </a>
+      )
+    }
+    return (
+      <Link key={`closing-link-${segment.key}-${index}`} href={href} target={target} rel={rel} className="text-teal-300 hover:text-teal-200 underline">
+        {link.label}
+      </Link>
+    )
+  }
+
   return (
     <>
       <main>
         <section className="py-16 md:py-24">
           <Container>
-            <SectionTitle eyebrow="FAQ" title="Frequently asked"/>
+            <SectionTitle eyebrow={faq.hero.eyebrow} title={faq.hero.title} />
             <div className="mt-6 flex">
-              <PrimaryCTA
-                href="https://meetings-na2.hubspot.com/inception/fund1-info"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Schedule a call
-              </PrimaryCTA>
+              {renderCTA()}
             </div>
             <div className="mt-6 divide-y divide-white/10">
-              {items.map((f, i)=> (
-                <details key={i} className="group py-4">
+              {faq.items.map((item: { q: string; a: string }, index: number) => (
+                <details key={index} className="group py-4">
                   <summary className="cursor-pointer list-none flex items-center justify-between text-left">
-                    <span className="font-medium">{f.q}</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-open:rotate-90"/>
+                    <span className="font-medium">{replaceTokens(item.q)}</span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-open:rotate-90" />
                   </summary>
-                  <p className="mt-3 text-neutral-300">{f.a}</p>
+                  <p className="mt-3 text-neutral-300" dangerouslySetInnerHTML={formatRichText(item.a)} />
                 </details>
               ))}
               <details className="group py-4">
                 <summary className="cursor-pointer list-none flex items-center justify-between text-left">
-                  <span className="font-medium">How can I learn more or invest?</span>
-                  <ArrowRight className="h-4 w-4 transition-transform group-open:rotate-90"/>
+                  <span className="font-medium">{faq.closing.question}</span>
+                  <ArrowRight className="h-4 w-4 transition-transform group-open:rotate-90" />
                 </summary>
                 <p className="mt-3 text-neutral-300">
-                  <Link href="/invest" className="text-teal-300 hover:text-teal-200 underline">Complete the investment form</Link> to confirm accredited investor status and review offering documents. Email{' '}
-                  <a href="mailto:invest@inceptionstudio.capital" className="text-teal-300 hover:text-teal-200 underline">invest@inceptionstudio.capital</a> or{' '}
-                  <a href="https://meetings-na2.hubspot.com/inception/fund1-info" target="_blank" rel="noopener noreferrer" className="text-teal-300 hover:text-teal-200 underline">schedule a no-obligation call with a Partner</a>. We also host Demo Days where you can see founders and companies firsthand.
+                  {faq.closing.segments.map((segment: any, idx: number) => renderClosingSegment(segment, idx))}
                 </p>
               </details>
             </div>
           </Container>
         </section>
       </main>
-      <Footer/>
+      <Footer />
     </>
   )
 }
