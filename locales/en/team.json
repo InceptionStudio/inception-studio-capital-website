@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "title": "Meet the team",
+    "sub": "Over five decades of combined Silicon Valley experience in AI, startups, and venture capital."
+  },
+  "people": {
+    "john": {
+      "name": "John Whaley",
+      "title": "Co‑Founder & Managing Partner",
+      "bio": "Serial entrepreneur; founded Moka5, UnifyID, Redcoat AI; Stanford PhD; Forbes AI 50; adjunct at Stanford."
+    },
+    "mike": {
+      "name": "Mike Morris",
+      "title": "Co‑Founder & Managing Partner",
+      "bio": "28‑year Silicon Valley veteran; early VMware engineer; led teams through 3 acquisitions and 1 IPO."
+    }
+  }
+}

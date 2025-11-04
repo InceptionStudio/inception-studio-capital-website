@@ -1,6 +1,7 @@
 import { ArrowRight, BarChart3, Rocket, ShieldCheck, Sparkles, Users2 } from 'lucide-react'
 import Link from 'next/link'
 import { ReactNode } from 'react'
+import kpis from '@/data/kpis.json' assert { type: 'json' }
 
 export function Container({ children, className='' }: {children:ReactNode, className?:string}){
   return <div className={`container-max ${className}`}>{children}</div>
@@ -26,12 +27,19 @@ export function SectionTitle({ title, subtitle, eyebrow }:{title:string, subtitl
     </div>
   )
 }
-export function StatsRow(){
+type MetricLabels = {
+  founders: string
+  repeatFounders: string
+  companiesRaised: string
+  capitalRaised: string
+}
+
+export function StatsRow({ labels }: { labels: MetricLabels }){
   const items = [
-    {icon: Users2, label:'235 founders'},
-    {icon: ShieldCheck, label:'82% repeat founders'},
-    {icon: Rocket, label:'42 companies raised'},
-    {icon: BarChart3, label:'$164M+ raised'}
+    {icon: Users2, label: `${kpis.foundersParticipated}${labels.founders}`},
+    {icon: ShieldCheck, label: `${kpis.repeatFounders}${labels.repeatFounders}`},
+    {icon: Rocket, label: `${kpis.numberCompaniesRaised}${labels.companiesRaised}`},
+    {icon: BarChart3, label: `${kpis.companiesTotalRaised}${labels.capitalRaised}`}
   ]
   return (
     <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">

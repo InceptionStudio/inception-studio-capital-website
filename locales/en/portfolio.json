@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "title": "Inception companies",
+    "sub": "42 companies founded, $166M+ follow‑on raised."
+  },
+  "examples": [
+    {
+      "name": "Ventrilo",
+      "desc": "AI‑powered writing assistant. $10M from a16z after forming team & demo at Inception."
+    },
+    {
+      "name": "mem0",
+      "desc": "Cross‑platform memory layer for LLMs. $20M Series A. 40K+ stars on GitHub."
+    },
+    {
+      "name": "TextClub",
+      "desc": "Stealth; founded by 4x founder Deyan Vitanov (3 exits)."
+    }
+  ]
+}

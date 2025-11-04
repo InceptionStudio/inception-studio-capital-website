@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "title": "Inceptionの企業",
+    "sub": "これまでに42社が創業し、フォローオンで$166M+を調達。"
+  },
+  "examples": [
+    {
+      "name": "Ventrilo",
+      "desc": "AIによる文章品質パートナー。Inception後にa16zから$10M調達。"
+    },
+    {
+      "name": "mem0",
+      "desc": "LLM向けクロスプラットフォーム・メモリレイヤー。Series Aで$20M、GitHubスター4万超。"
+    },
+    {
+      "name": "TextClub",
+      "desc": "ステルス。4度の起業（3回のイグジット）経験を持つDeyan Vitanovが創業。"
+    }
+  ]
+}

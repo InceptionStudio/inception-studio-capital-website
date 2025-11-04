@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "thesis": "投資戦略",
+    "portfolio": "ポートフォリオ",
+    "team": "チーム",
+    "faq": "FAQ",
+    "invest": "出資のご案内"
+  },
+  "metrics": {
+    "founders": "名 創業者参加",
+    "repeatFounders": " 連続起業家",
+    "companiesRaised": "社 資金調達済み企業",
+    "capitalRaised": " 累計調達額",
+    "foundersParticipated": "名 創業者参加",
+    "cohortRetreats": " コホートリトリート",
+    "founderNps": " 創業者NPS",
+    "founderReferralRate": " 他の創業者からの紹介",
+    "repeatFoundersWithExit": " 過去に成功したイグジット経験のある連続起業家",
+    "numberCompaniesRaised": " 資金調達した企業数",
+    "raisedInTotal": " 以前資本を調達",
+    "averageIndustryExperience": " 平均職務経験年数"
+  },
+  "cta": {
+    "invest": "投資をご検討の方はこちら",
+    "schedule": "面談を予約する",
+    "faq": "よくある質問（FAQ）"
+  },
+  "footer": {
+    "nonprofit": "Inception Studio（非営利）",
+    "privacy": "プライバシー",
+    "legal": "リーガル",
+    "email": "メール"
+  },
+  "switcher": {
+    "en": "英語",
+    "ja": "日本語"
+  }
+}

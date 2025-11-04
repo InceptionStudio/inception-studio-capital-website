@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "eyebrow": "Silicon Valley • AI‑native • Zero‑equity funnel",
+    "title_prefix": "Backing the most ",
+    "title_highlight": "experienced AI founders ",
+    "title_suffix": "from day zero.",
+    "sub": "We built the Bay Area’s most selective zero‑equity founder community. Our fund takes first‑money positions and follows winners—with privileged access others can’t get."
+  },
+  "opportunity": {
+    "eyebrow": "The Opportunity",
+    "title": "Why Experienced Founders Choose Us",
+    "subtitle": "Traditional accelerators fail elite founders. We built something different.",
+    "cards": [
+      {
+        "icon": "🎯",
+        "title": "Zero Equity Model",
+        "body": "Our non-profit accelerator takes 0% equity, attracting founders who would never join YC or traditional programs."
+      },
+      {
+        "icon": "⚡",
+        "title": "3-Day Retreats",
+        "body": "Not a 3-month program. Experienced founders need focus and deadlines, not basic startup education."
+      },
+      {
+        "icon": "🚀",
+        "title": "First Money In",
+        "body": "We invest at formation, before anyone else. Best terms, privileged access to elite founders."
+      }
+    ],
+    "testimonial": {
+      "quote": "Inception gave us that initial push to get over the 'activation energy' required... Our company would not exist without Inception.",
+      "author": "Andy Chou",
+      "role": "Founder & CEO, Ventrilo (raised $10M from a16z)",
+      "background": "Previously founded Coverity (acquired for $350M)",
+      "imageAlt": "Andy Chou"
+    }
+  },
+  "edge": {
+    "title": "Zero‑equity retreats → privileged access",
+    "eyebrow": "Our Edge",
+    "heading": "The Inception Advantage",
+    "subtitle": "We've cracked the code on attracting elite founders",
+    "bullets": [
+      {
+        "title": "No Adverse Selection",
+        "body": "Every accelerator takes equity. The best founders have better options, so they don't participate. This creates adverse selection."
+      },
+      {
+        "title": "",
+        "body": "We flipped the model. <strong>Zero equity means zero adverse selection.</strong> The best founders join Inception because there's no downside."
+      },
+      {
+        "title": "",
+        "body": "<strong>Result:</strong> We see founders other investors never will. We invest before anyone else. We get the best terms."
+      }
+    ]
+  },
+  "thesis": {
+    "eyebrow": "Our Thesis",
+    "title": "Simple thesis, powerful edge",
+    "bullets": [
+      "<strong>Experienced founders win.</strong> They're 1.6–2.0× likelier to produce outsized outcomes and raise more with less dilution.",
+      "<strong>Zero‑equity top‑of‑funnel.</strong> Our 72‑hour retreats attract elite repeat founders who avoid traditional accelerators.",
+      "<strong>Own the earliest allocation.</strong> $100k starters at formation, then $500k–$1.5M into validated winners, with MFN & pro‑rata."
+    ],
+    "ctaPrimary": "Invest with us",
+    "ctaSecondary": "Read the full thesis"
+  },
+  "commit": {
+    "title": "Allocations are limited for Fund I.",
+    "subtitle": "Minimum commitment $250K. Initial capital call 25%."
+  }
+}

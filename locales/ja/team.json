@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "title": "チーム紹介",
+    "sub": "AI・スタートアップ・VCで合計50年以上のシリコンバレー経験。"
+  },
+  "people": {
+    "john": {
+      "name": "John Whaley",
+      "title": "共同創業者／マネージング・パートナー",
+      "bio": "連続起業家。Moka5、UnifyID、Redcoat AIを創業。スタンフォード大学 博士（CS）。Forbes AI 50選出。スタンフォード大学講師。"
+    },
+    "mike": {
+      "name": "Mike Morris",
+      "title": "共同創業者／マネージング・パートナー",
+      "bio": "シリコンバレーで28年の経験。VMware初期メンバーとして製品開発を牽引。3回のM&Aと1回のIPOを経験。"
+    }
+  }
+}

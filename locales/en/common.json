@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "thesis": "Thesis",
+    "portfolio": "Portfolio",
+    "team": "Team",
+    "faq": "FAQ",
+    "invest": "Invest with us"
+  },
+  "metrics": {
+    "founders": " founders",
+    "repeatFounders": " repeat founders",
+    "companiesRaised": " companies raised",
+    "capitalRaised": "+ raised",
+    "foundersParticipated": " founders participated",
+    "cohortRetreats": " cohort retreats",
+    "founderNps": " founder NPS",
+    "founderReferralRate": " founder‑to‑founder referrals",
+    "repeatFoundersWithExit": " repeat founders with prior successful exit",
+    "numberCompaniesRaised": " companies raised",
+    "raisedInTotal": " raised in total",
+    "averageIndustryExperience": " average industry experience"
+  },
+  "cta": {
+    "invest": "Invest with us",
+    "schedule": "Schedule a call",
+    "faq": "FAQ"
+  },
+  "footer": {
+    "nonprofit": "Inception Studio (nonprofit)",
+    "privacy": "Privacy",
+    "legal": "Legal",
+    "email": "Email"
+  },
+  "switcher": {
+    "en": "EN",
+    "ja": "JP"
+  }
+}
