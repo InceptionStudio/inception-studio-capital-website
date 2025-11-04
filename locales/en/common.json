@@ -26,10 +26,12 @@
     "faq": "FAQ"
   },
   "footer": {
+    "firmName": "Inception Studio Capital",
     "nonprofit": "Inception Studio (nonprofit)",
     "privacy": "Privacy",
     "legal": "Legal",
-    "email": "Email"
+    "email": "Email",
+    "disclaimer": "This site is for information only and not an offer to sell or solicit an offer to buy any security. Any offering is made only pursuant to official documents. Venture investing involves risk, including the possible loss of principal. Past performance is not indicative of future results."
   },
   "switcher": {
     "en": "EN",
