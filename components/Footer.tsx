@@ -15,6 +15,7 @@ export default function Footer(){
   const localeParam = params?.locale
   const locale = Array.isArray(localeParam) ? localeParam[0] : localeParam
   const labels = FOOTER_DICTIONARIES[locale ?? ''] ?? enCommon.footer
+  const prefix = locale && FOOTER_DICTIONARIES[locale] ? `/${locale}` : ''
   const currentYear = new Date().getFullYear()
 
   return (
@@ -25,8 +26,8 @@ export default function Footer(){
           <a className="hover:text-white/90" href="https://www.inceptionstudio.org" target="_blank" rel="noreferrer">
             {labels.nonprofit}
           </a>
-          <Link className="hover:text-white/90" href="/privacy">{labels.privacy}</Link>
-          <Link className="hover:text-white/90" href="/legal">{labels.legal}</Link>
+          <Link className="hover:text-white/90" href={`${prefix}/privacy`}>{labels.privacy}</Link>
+          <Link className="hover:text-white/90" href={`${prefix}/legal`}>{labels.legal}</Link>
           <a className="hover:text-white/90" href="mailto:invest@inceptionstudio.org">{labels.email}</a>
         </div>
       </div>

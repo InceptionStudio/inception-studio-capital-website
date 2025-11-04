@@ -1,11 +1,9 @@
-import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { Container, SectionTitle } from '@/components/Blocks'
 
 export default function Page(){
   return (
     <>
-      <Nav/>
       <main>
         <section className="py-16 md:py-24">
           <Container>
