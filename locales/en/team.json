@@ -1,18 +1,98 @@
 {
   "hero": {
+    "eyebrow": "Our Partners",
     "title": "Meet the team",
     "sub": "Over five decades of combined Silicon Valley experience in AI, startups, and venture capital."
   },
+  "labels": {
+    "linkedin": "LinkedIn Profile"
+  },
   "people": {
     "john": {
+      "image": { "src": "/team/john-whaley.jpeg", "alt": "John Whaley" },
       "name": "John Whaley",
-      "title": "Co‑Founder & Managing Partner",
-      "bio": "Serial entrepreneur; founded Moka5, UnifyID, Redcoat AI; Stanford PhD; Forbes AI 50; adjunct at Stanford."
+      "title": "Co-Founder & Managing Partner",
+      "intro": "John Whaley is a serial entrepreneur and renowned expert in compilers, cybersecurity, and machine learning. He founded three cybersecurity companies—Moka5, UnifyID, and Redcoat AI—and created Inception Studio, a zero-equity accelerator for elite AI founders.",
+      "sections": [
+        {
+          "type": "list",
+          "title": "Academic excellence",
+          "items": [
+            "Stanford PhD, Arthur Samuel Best Doctoral Thesis Award",
+            "MIT B.S. and M.Eng. in EECS with a perfect 5.0 GPA",
+            "Adjunct Lecturer at Stanford (Compilers & Building with LLMs)",
+            "Named to Forbes AI 50",
+            "Best paper awards at PLDI, ISSTA, and OOPSLA",
+            "His work on compilers formed the basis of Chapter 12 of the \"Dragon Book\""
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Entrepreneurship",
+          "items": [
+            "Redcoat AI: AI-powered cybersecurity",
+            "UnifyID: Behavioral biometrics authentication (acquired by Prove)",
+            "Moka5: Enterprise virtual desktop infrastructure (raised $80M+)",
+            "Multiple startup competition wins including SXSW, RSA, MIT AI Idol",
+            "Runner-up at TechCrunch Disrupt SF 2016"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Inception Studio impact",
+          "body": "In 2022, John launched Inception Studio to give experienced founders the focused, zero-equity support they need. The community has now welcomed {{foundersParticipated}} founders who have started {{numberCompaniesRaised}} companies and raised over {{companiesTotalRaised}}, with trust built before any capital is deployed."
+        }
+      ],
+      "contact": {
+        "email": "john@inceptionstudio.org",
+        "linkedin": "https://linkedin.com/in/joewhaley"
+      }
     },
     "mike": {
+      "image": { "src": "/team/mike-morris.jpg", "alt": "Mike Morris" },
       "name": "Mike Morris",
-      "title": "Co‑Founder & Managing Partner",
-      "bio": "28‑year Silicon Valley veteran; early VMware engineer; led teams through 3 acquisitions and 1 IPO."
+      "title": "Co-Founder & Managing Partner",
+      "intro": "Mike Morris is a 28-year Silicon Valley veteran with deep expertise in building world-class technical teams. Before co-founding Inception Studio and Redcoat AI, he helped grow multiple startups through acquisitions and an IPO.",
+      "sections": [
+        {
+          "type": "list",
+          "title": "Career highlights",
+          "items": [
+            "VMware: one of the first 80 employees, scaling from startup to 20,000-employee public company",
+            "NetCitadel: founding technical leader (acquired by Proofpoint)",
+            "UnifyID: VP Engineering (acquired by Prove)",
+            "Led engineering organizations through multiple acquisitions",
+            "Nearly three decades of leadership in enterprise software and cybersecurity"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Expertise",
+          "body": "Mike brings battle-tested operational experience—knowing how to build, scale, and integrate technical teams. His track record through multiple exits gives founders a clear blueprint for creating acquirable, defensible companies."
+        },
+        {
+          "type": "text",
+          "title": "Inception Studio",
+          "body": "As co-founder of Inception Studio, Mike shapes the retreat programs and community that attract elite technical founders. He focuses on identifying teams with the depth, execution, and resilience to win in AI-native markets."
+        }
+      ],
+      "contact": {
+        "email": "mike@inceptionstudio.org",
+        "linkedin": "https://www.linkedin.com/in/mikemorris7/"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to invest in the next generation of AI founders?",
+    "subtitle": "Join our limited allocation for Fund I. Minimum commitment $250K.",
+    "primary": {
+      "label": "Invest with us",
+      "href": "/invest"
+    },
+    "secondary": {
+      "label": "Schedule a call",
+      "href": "https://meetings-na2.hubspot.com/inception/fund1-info",
+      "newTab": true
     }
   }
 }

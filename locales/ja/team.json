@@ -1,18 +1,100 @@
 {
   "hero": {
-    "title": "チーム紹介",
-    "sub": "AI・スタートアップ・VCで合計50年以上のシリコンバレー経験。"
+    "eyebrow": "パートナー",
+    "title": "チームを紹介します",
+    "sub": "AI・スタートアップ・ベンチャーキャピタル分野で、通算50年以上のシリコンバレー経験を持つチームです。"
+  },
+  "labels": {
+    "linkedin": "LinkedInプロフィール"
   },
   "people": {
     "john": {
-      "name": "John Whaley",
-      "title": "共同創業者／マネージング・パートナー",
-      "bio": "連続起業家。Moka5、UnifyID、Redcoat AIを創業。スタンフォード大学 博士（CS）。Forbes AI 50選出。スタンフォード大学講師。"
+      "image": { "src": "/team/john-whaley.jpeg", "alt": "John Whaley" },
+      "name": "ジョン・ウェイリー（John Whaley）",
+      "title": "共同創業者・マネージングパートナー",
+      "intro": "John Whaleyはコンパイラ、サイバーセキュリティ、機械学習の分野で知られる連続起業家です。Moka5、UnifyID、Redcoat AIの3社を創業し、トップ層のAI創業者向けにゼロエクイティ型のInception Studioを立ち上げました。",
+      "sections": [
+        {
+          "type": "list",
+          "title": "学術・研究",
+          "items": [
+            "5歳でプログラミングを開始、高校時代に全米コンピューティングオリンピックTOP15",
+            "スタンフォード大学 コンピュータサイエンス博士（最優秀博士論文賞受賞）",
+            "マサチューセッツ工科大学（MIT）電気工学・コンピュータサイエンス学士号および修士号（GPA 5.0満点）",
+            "スタンフォード大学 非常勤講師（コンパイラ／大規模言語モデルによるアプリケーション構築）",
+            "Forbes「AI 50」に選出",
+          	"PLDI、ISSTA、OOPSLAにてベストペーパー賞受賞",
+            "コンパイラに関する研究が「ドラゴンブック（Compilers: Principles, Techniques, and Tools）」第12章の基礎となる",
+            "IBM T.J.ワトソン研究所（米国）およびIBM東京研究所（日本）に勤務"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "起業家精神",
+          "items": [
+            "Moka5：エンタープライズ向け仮想デスクトップインフラ（資金調達総額$80M超）",
+            "UnifyID：行動認証（Proveに買収）",
+            "Redcoat AI：AIを活用したサイバーセキュリティ",
+            "SXSW・RSA・MIT AI Idolなど多数のピッチコンテストで優勝",
+            "TechCrunch Disrupt SF 2016 準優勝"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Inception Studioの実績",
+          "body": "2022年、Johnは経験豊富な創業者が集中できるゼロエクイティの環境を提供するためInception Studioを立ち上げました。現在までに{{foundersParticipated}}名が参加し、{{numberCompaniesRaised}}社が創業、{{companiesTotalRaised}}以上を調達。資本を投下する前に信頼関係を構築しています。"
+        }
+      ],
+      "contact": {
+        "email": "john@inceptionstudio.org",
+        "linkedin": "https://www.linkedin.com/in/joewhaley/"
+      }
     },
     "mike": {
+      "image": { "src": "/team/mike-morris.jpg", "alt": "Mike Morris" },
       "name": "Mike Morris",
-      "title": "共同創業者／マネージング・パートナー",
-      "bio": "シリコンバレーで28年の経験。VMware初期メンバーとして製品開発を牽引。3回のM&Aと1回のIPOを経験。"
+      "title": "共同創業者・マネージングパートナー",
+      "intro": "Mike Morrisはシリコンバレーで28年のキャリアを持つオペレーターです。Inception StudioおよびRedcoat AIの共同創業以前に、複数のスタートアップを買収やIPOへと導いてきました。",
+      "sections": [
+        {
+          "type": "list",
+          "title": "キャリア・ハイライト",
+          "items": [
+            "VMware：創業期80人目の社員として20,000人規模まで成長を牽引",
+            "NetCitadel：創業技術リーダー（Proofpoint社に買収）",
+            "UnifyID：エンジニアリング担当VP（Prove社に買収）",
+            "複数の買収案件で技術組織をリード",
+            "企業向けソフトウェアとサイバーセキュリティ領域で約30年のマネジメント経験"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "専門性",
+          "body": "Mikeは組織の立ち上げからスケール、統合までを熟知する実務家です。複数の成功したイグジットを経て、買収されやすく防御力の高い企業をつくるための実践的な指針を創業者に提供します。"
+        },
+        {
+          "type": "text",
+          "title": "Inception Studioでの役割",
+          "body": "Inception Studioの共同創業者として、Mikeはリトリートのプログラム設計とコミュニティづくりを主導。深い専門性と実行力を備えた創業チームを見極め、AIネイティブ市場で勝ち切る体制づくりを支援します。"
+        }
+      ],
+      "contact": {
+        "email": "mike@inceptionstudio.org",
+        "linkedin": "https://www.linkedin.com/in/mikemorris7/"
+      }
+    }
+  },
+  "cta": {
+    "title": "次世代のAI創業者へ投資する準備はできていますか？",
+    "subtitle": "Fund Iのアロケーションには限りがあります。最低出資額は$250Kです。",
+    "primary": {
+      "label": "出資のご相談",
+      "href": "/invest"
+    },
+    "secondary": {
+      "label": "パートナーとの面談を予約",
+      "href": "https://meetings-na2.hubspot.com/inception/fund1-info",
+      "newTab": true
     }
   }
 }

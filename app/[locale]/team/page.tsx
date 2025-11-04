@@ -5,19 +5,48 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AdvisorsSection from '@/components/AdvisorsSection'
 import kpis from '@/data/kpis.json' assert { type: 'json' }
+import { getDictionary } from '@/lib/i18n'
+
+const SUPPORTED_LOCALES = ['en', 'ja'] as const
+
+type Locale = typeof SUPPORTED_LOCALES[number]
+
+type ListSection = {
+  type: 'list'
+  title: string
+  items: string[]
+}
+
+type TextSection = {
+  type: 'text'
+  title?: string
+  body: string
+}
+
+type Person = {
+  image: { src: string; alt: string }
+  name: string
+  title: string
+  intro: string
+  sections: Array<ListSection | TextSection>
+  contact: {
+    email: string
+    phone?: { href: string; label: string }
+    linkedin?: string
+  }
+}
 
 const highlightIconClass = 'h-5 w-5 text-brand-400'
 const contactLinkClass = 'flex items-center gap-2 text-neutral-300 hover:text-white transition-colors'
 
-function ContactLinks({
-  email,
-  phone,
-  linkedin
-}: {
+type ContactProps = {
   email: string
   phone?: { href: string; label: string }
   linkedin?: string
-}) {
+  linkedinLabel?: string
+}
+
+function ContactLinks({ email, phone, linkedin, linkedinLabel }: ContactProps) {
   return (
     <div className="space-y-3">
       <a href={`mailto:${email}`} className={contactLinkClass}>
@@ -33,20 +62,19 @@ function ContactLinks({
       {linkedin && (
         <Link href={linkedin} target="_blank" rel="noopener noreferrer" className={contactLinkClass}>
           <Linkedin className="h-4 w-4" />
-          LinkedIn Profile
+          {linkedinLabel ?? 'LinkedIn Profile'}
         </Link>
       )}
     </div>
   )
 }
 
-function Highlight({
-  title,
-  items
-}: {
+type HighlightProps = {
   title: string
   items: string[]
-}) {
+}
+
+function Highlight({ title, items }: HighlightProps) {
   return (
     <div>
       <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
@@ -54,30 +82,102 @@ function Highlight({
         {title}
       </h3>
       <ul className="space-y-2 list-disc pl-5 text-neutral-300">
-        {items.map(item => (
-          <li key={item} className="leading-relaxed">
-            {item}
-          </li>
+        {items.map((item, index) => (
+          <li
+            key={`${title}-${index}`}
+            className="leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: item }}
+          />
         ))}
       </ul>
     </div>
   )
 }
 
-export default function TeamPage() {
+function isListSection(section: ListSection | TextSection): section is ListSection {
+  return section.type === 'list'
+}
+
+export default async function TeamPage({
+  params: { locale }
+}: {
+  params: { locale: Locale }
+}) {
+  const currentLocale: Locale = SUPPORTED_LOCALES.includes(locale) ? locale : 'en'
+  const dict = await getDictionary(currentLocale, 'team', 'common')
+  const team = dict.team
+  const metrics = dict.common?.metrics ?? {}
+
+  const replacements: Record<string, string> = {
+    foundersParticipated: kpis.foundersParticipated,
+    repeatFounders: kpis.repeatFounders,
+    repeatFoundersWithExit: kpis.repeatFoundersWithExit,
+    numberCompaniesRaised: kpis.numberCompaniesRaised,
+    companiesTotalRaised: kpis.companiesTotalRaised,
+    averageIndustryExperience: kpis.averageIndustryExperience,
+    founderNps: kpis.founderNps,
+    founderReferralRate: kpis.founderReferralRate
+  }
+
+  const replaceTokens = (input: string) =>
+    input.replace(/{{(.*?)}}/g, (_, key) => replacements[key.trim()] ?? '')
+
+  const formatRichText = (input: string) => ({
+    __html: replaceTokens(input).replace(/\n/g, '<br/>')
+  })
+
+  const resolveHref = (href: string) => {
+    if (href.startsWith('http') || href.startsWith('mailto:')) {
+      return href
+    }
+    return `/${currentLocale}${href}`
+  }
+
+  const linkedinLabel = team.labels?.linkedin ?? 'LinkedIn Profile'
+
+  const john = team.people.john as Person
+  const mike = team.people.mike as Person
+  const cta = team.cta as {
+    title: string
+    subtitle: string
+    primary: { label: string; href: string; newTab?: boolean }
+    secondary: { label: string; href: string; newTab?: boolean }
+  }
+
+  const renderSections = (sections: Array<ListSection | TextSection>) =>
+    sections.map((section, index) =>
+      isListSection(section) ? (
+        <Highlight
+          key={`${section.title}-${index}`}
+          title={section.title}
+          items={section.items.map((item) => formatRichText(item).__html)}
+        />
+      ) : (
+        <div key={`${section.title ?? 'text'}-${index}`}>
+          {section.title && (
+            <h3 className="text-xl font-semibold text-white mb-3">{section.title}</h3>
+          )}
+          <p className="leading-relaxed" dangerouslySetInnerHTML={formatRichText(section.body)} />
+        </div>
+      )
+    )
+
   return (
     <>
       <main>
         <section className="bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 py-24 md:py-32">
           <Container>
             <div className="max-w-3xl mx-auto text-center space-y-4">
-              <p className="eyebrow justify-center">Our Partners</p>
+              <p className="eyebrow justify-center">{team.hero.eyebrow}</p>
               <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
-                Meet the team
+                {team.hero.title}
               </h1>
-              <p className="text-xl text-neutral-300">
-                Over five decades of combined Silicon Valley experience in AI, startups, and venture capital.
-              </p>
+              {team.hero.sub && (
+                <p
+                  className="text-xl text-neutral-300"
+                  dangerouslySetInnerHTML={formatRichText(team.hero.sub)}
+                />
+              )}
             </div>
           </Container>
         </section>
@@ -89,55 +189,28 @@ export default function TeamPage() {
                 <div>
                   <div className="aspect-square rounded-2xl bg-white/5 ring-1 ring-white/10 mb-6 overflow-hidden relative">
                     <Image
-                      src="/team/john-whaley.jpeg"
-                      alt="John Whaley"
+                      src={john.image.src}
+                      alt={john.image.alt}
                       fill
                       className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 400px"
                     />
                   </div>
-                  <h2 className="text-3xl font-bold text-white">John Whaley</h2>
-                  <p className="text-lg text-brand-400 mb-6">Co-Founder &amp; Managing Partner</p>
+                  <h2 className="text-3xl font-bold text-white">{john.name}</h2>
+                  <p className="text-lg text-brand-400 mb-6">{john.title}</p>
                   <ContactLinks
-                    email="john@inceptionstudio.org"
-                    linkedin="https://linkedin.com/in/joewhaley"
+                    email={john.contact.email}
+                    phone={john.contact.phone}
+                    linkedin={john.contact.linkedin}
+                    linkedinLabel={linkedinLabel}
                   />
                 </div>
                 <div className="space-y-8 text-neutral-300">
-                  <p className="text-lg leading-relaxed">
-                    John Whaley is a serial entrepreneur and renowned expert in compilers, cybersecurity, and machine learning.
-                    He founded three cybersecurity companies—Moka5, UnifyID, and Redcoat AI—and created Inception Studio, a zero-equity
-                    accelerator for elite AI founders.
-                  </p>
-                  <Highlight
-                    title="Academic excellence"
-                    items={[
-                      'Stanford PhD, Arthur Samuel Best Doctoral Thesis Award',
-                      'MIT B.S. and M.Eng. in EECS with a perfect 5.0 GPA',
-                      'Adjunct Lecturer at Stanford (Compilers & Building with LLMs)',
-                      'Named to Forbes AI 50',
-                      'Best paper awards at PLDI, ISSTA, and OOPSLA',
-                      'His work on compilers formed the basis of Chapter 12 of the "Dragon Book"'
-                    ]}
+                  <p
+                    className="text-lg leading-relaxed"
+                    dangerouslySetInnerHTML={formatRichText(john.intro)}
                   />
-                  <Highlight
-                    title="Entrepreneurship"
-                    items={[
-                      'Redcoat AI: AI-powered cybersecurity',
-                      'UnifyID: Behavioral biometrics authentication (acquired by Prove)',
-                      'Moka5: Enterprise virtual desktop infrastructure (raised $45M+)',
-                      'Multiple startup competition wins including SXSW, RSA, MIT AI Idol',
-                      'Runner-up at TechCrunch Disrupt SF 2016'
-                    ]}
-                  />
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Inception Studio impact</h3>
-                    <p className="leading-relaxed">
-                      In 2022, John launched Inception Studio to give experienced founders the focused, zero-equity support they need.
-                      The community has now welcomed {kpis.foundersParticipated} founders who have started {kpis.numberCompaniesRaised} companies and raised over {kpis.companiesTotalRaised}, with trust built
-                      before any capital is deployed.
-                    </p>
-                  </div>
+                  {renderSections(john.sections)}
                 </div>
               </div>
 
@@ -145,49 +218,28 @@ export default function TeamPage() {
                 <div>
                   <div className="aspect-square rounded-2xl bg-white/5 ring-1 ring-white/10 mb-6 overflow-hidden relative">
                     <Image
-                      src="/team/mike-morris.jpg"
-                      alt="Mike Morris"
+                      src={mike.image.src}
+                      alt={mike.image.alt}
                       fill
                       className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 400px"
                     />
                   </div>
-                  <h2 className="text-3xl font-bold text-white">Mike Morris</h2>
-                  <p className="text-lg text-brand-400 mb-6">Co-Founder &amp; Managing Partner</p>
+                  <h2 className="text-3xl font-bold text-white">{mike.name}</h2>
+                  <p className="text-lg text-brand-400 mb-6">{mike.title}</p>
                   <ContactLinks
-                    email="mike@inceptionstudio.org"
-                    linkedin="https://www.linkedin.com/in/mikemorris7/"
+                    email={mike.contact.email}
+                    phone={mike.contact.phone}
+                    linkedin={mike.contact.linkedin}
+                    linkedinLabel={linkedinLabel}
                   />
                 </div>
                 <div className="space-y-8 text-neutral-300">
-                  <p className="text-lg leading-relaxed">
-                    Mike Morris is a 28-year Silicon Valley veteran with deep expertise in building world-class technical teams.
-                    Before co-founding Inception Studio and Redcoat AI, he helped grow multiple startups through acquisitions and an IPO.
-                  </p>
-                  <Highlight
-                    title="Career highlights"
-                    items={[
-                      'VMware: one of the first 80 employees, scaling from startup to 20,000-employee public company',
-                      'NetCitadel: founding technical leader (acquired by Proofpoint)',
-                      'UnifyID: VP Engineering (acquired by Prove)',
-                      'Led engineering organizations through multiple acquisitions',
-                      'Nearly three decades of leadership in enterprise software and cybersecurity'
-                    ]}
+                  <p
+                    className="text-lg leading-relaxed"
+                    dangerouslySetInnerHTML={formatRichText(mike.intro)}
                   />
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Expertise</h3>
-                    <p className="leading-relaxed">
-                      Mike brings battle-tested operational experience—knowing how to build, scale, and integrate technical teams.
-                      His track record through multiple exits gives founders a clear blueprint for creating acquirable, defensible companies.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Inception Studio</h3>
-                    <p className="leading-relaxed">
-                      As co-founder of Inception Studio, Mike shapes the retreat programs and community that attract elite technical founders.
-                      He focuses on identifying teams with the depth, execution, and resilience to win in AI-native markets.
-                    </p>
-                  </div>
+                  {renderSections(mike.sections)}
                 </div>
               </div>
             </div>
@@ -196,21 +248,26 @@ export default function TeamPage() {
 
         <AdvisorsSection />
 
-        {/* CTA SECTION */}
         <section className="py-10 border-t border-white/5 bg-gradient-to-r from-brand-500/15 to-brand-800/15">
           <Container className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
-              <div className="text-lg font-semibold">Ready to invest in the next generation of AI founders?</div>
-              <div className="text-neutral-300 text-sm">Join our limited allocation for Fund I. Minimum commitment $250K.</div>
+              <div className="text-lg font-semibold" dangerouslySetInnerHTML={formatRichText(cta.title)} />
+              <div className="text-neutral-300 text-sm" dangerouslySetInnerHTML={formatRichText(cta.subtitle)} />
             </div>
             <div className="flex flex-wrap gap-3 justify-center md:justify-end">
-              <PrimaryCTA href="/invest">Invest with us</PrimaryCTA>
-              <SecondaryCTA
-                href="https://meetings-na2.hubspot.com/inception/fund1-info"
-                target="_blank"
-                rel="noopener noreferrer"
+              <PrimaryCTA
+                href={resolveHref(cta.primary.href)}
+                target={cta.primary.newTab ? '_blank' : undefined}
+                rel={cta.primary.newTab ? 'noopener noreferrer' : undefined}
               >
-                Schedule a call
+                {cta.primary.label}
+              </PrimaryCTA>
+              <SecondaryCTA
+                href={resolveHref(cta.secondary.href)}
+                target={cta.secondary.newTab ? '_blank' : undefined}
+                rel={cta.secondary.newTab ? 'noopener noreferrer' : undefined}
+              >
+                {cta.secondary.label}
               </SecondaryCTA>
             </div>
           </Container>
