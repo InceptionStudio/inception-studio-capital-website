@@ -1,4 +1,17 @@
 {
-  "hero": "Invest with us",
-  "body": "Thank you for your interest in the Fund. Confirm accredited status to view offering docs and complete the application. Questions? invest@inceptionstudio.capital."
+  "hero": {
+    "eyebrow": "Get Started",
+    "title": "Invest with us"
+  },
+  "body": {
+    "paragraphs": [
+      "Thank you for your interest in the Inception Studio Capital Fund.",
+      "The first step is to complete the form so we can confirm you are an accredited investor.",
+      "Once submitted, you can review the fund's offering documents and, if you're ready, finalize the investor application.",
+      "If you have any questions about this process please contact us at {{email}} or schedule a no-obligation appointment with a Partner {{link}}."
+    ],
+    "email": "invest@inceptionstudio.capital",
+    "meetingLinkText": "here",
+    "meetingLinkUrl": "https://app-na2.hubspot.com/meetings/inception/fund1-info"
+  }
 }

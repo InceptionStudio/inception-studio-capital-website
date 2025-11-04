@@ -1,4 +1,17 @@
 {
-  "hero": "出資のご案内",
-  "body": "当ファンドへのご関心ありがとうございます。適格投資家（Accredited Investor）の確認後、オファリング資料の閲覧と申込にお進みいただけます。ご質問は invest@inceptionstudio.capital まで。"
+  "hero": {
+    "eyebrow": "はじめに",
+    "title": "出資のご案内（Invest with us）"
+  },
+  "body": {
+    "paragraphs": [
+      "Inception Studio Capitalファンドにご関心をお寄せいただき、誠にありがとうございます。",
+      "出資の手続きを開始するには、まず以下のフォームにご入力のうえ、適格投資家（accredited investor）であることをご確認ください。",
+      "次のページでは、ファンドの募集要項および関連書類をご確認いただき、出資を進める準備が整いましたら、投資申込手続きを完了いただけます。",
+      "ご不明な点やご相談がありましたら、\nお気軽に {{email}}￼ までご連絡いただくか、\nパートナーとの無料面談を {{link}} から予約してください。"
+    ],
+    "email": "invest@inceptionstudio.capital",
+    "meetingLinkText": "こちら",
+    "meetingLinkUrl": "https://app-na2.hubspot.com/meetings/inception/fund1-info"
+  }
 }
