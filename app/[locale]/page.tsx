@@ -63,15 +63,15 @@ export default async function Home({
     subtitle: string;
   };
   const metrics = [
-    {kpi: kpis.foundersParticipated, label: dict.common.metrics.foundersParticipated},
+    {kpi: kpis.foundersParticipated+dict.common.metrics.foundersUnit, label: dict.common.metrics.foundersParticipated},
     {kpi: kpis.cohortRetreats, label: dict.common.metrics.cohortRetreats},
     {kpi: kpis.founderNps, label: dict.common.metrics.founderNps},
     {kpi: kpis.founderReferralRate, label: dict.common.metrics.founderReferralRate},
     {kpi: kpis.repeatFounders, label: dict.common.metrics.repeatFounders},
     {kpi: kpis.repeatFoundersWithExit, label: dict.common.metrics.repeatFoundersWithExit},
-    {kpi: kpis.numberCompaniesRaised, label: dict.common.metrics.numberCompaniesRaised},
+    {kpi: kpis.numberCompaniesRaised+dict.common.metrics.companiesUnit, label: dict.common.metrics.numberCompaniesRaised},
     {kpi: kpis.raisedInTotal, label: dict.common.metrics.raisedInTotal},
-    {kpi: kpis.averageIndustryExperience, label: dict.common.metrics.averageIndustryExperience}
+    {kpi: kpis.averageIndustryExperience+dict.common.metrics.yearsUnit, label: dict.common.metrics.averageIndustryExperience}
   ];
   return (
     <>
@@ -445,7 +445,7 @@ export default async function Home({
                       </div>
                       <div className="mb-4">
                         <div className="text-sm font-semibold text-brand-400">Brandon White &amp; Alex Beatson</div>
-                        <p className="text-sm text-neutral-300 mt-1">Beatson, ex-Director of ML at Redesign Science, Princeton PhD in generative models, and 2× Scale AI GenAI hackathon runner-up</p>
+                        <p className="text-sm text-neutral-300 mt-1">Ex-Director of ML at Redesign Science, Princeton PhD in generative models, and 2× Scale AI GenAI hackathon runner-up</p>
                       </div>
                       <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
                         <div>

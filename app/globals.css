@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html { font-size: 17px; }
+
+@media (min-width: 1024px) {
+  html { font-size: 18px; }
+}
+
 html, body { @apply h-full text-neutral-100; background-color: #1e2120; }
 .container-max { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
 .btn { @apply inline-flex items-center gap-2 rounded-full font-semibold px-5 py-2; }

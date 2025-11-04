@@ -7,11 +7,14 @@
     "invest": "出資のご案内"
   },
   "metrics": {
-    "founders": "名 創業者参加",
+    "foundersUnit": "名",
+    "companiesUnit": "社",
+    "yearsUnit": "年",
+    "founders": " 創業者参加",
     "repeatFounders": " 連続起業家",
-    "companiesRaised": "社 資金調達済み企業",
+    "companiesRaised": " 資金調達済み企業",
     "capitalRaised": " 累計調達額",
-    "foundersParticipated": "名 創業者参加",
+    "foundersParticipated": " 創業者参加",
     "cohortRetreats": " コホートリトリート",
     "founderNps": " 創業者NPS",
     "founderReferralRate": " 他の創業者からの紹介",

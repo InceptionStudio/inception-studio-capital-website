@@ -28,6 +28,8 @@ export function SectionTitle({ title, subtitle, eyebrow }:{title:string, subtitl
   )
 }
 type MetricLabels = {
+  foundersUnit: string
+  companiesUnit: string
   founders: string
   repeatFounders: string
   companiesRaised: string
@@ -36,9 +38,9 @@ type MetricLabels = {
 
 export function StatsRow({ labels }: { labels: MetricLabels }){
   const items = [
-    {icon: Users2, label: `${kpis.foundersParticipated}${labels.founders}`},
+    {icon: Users2, label: `${kpis.foundersParticipated}${labels.foundersUnit}${labels.founders}`},
     {icon: ShieldCheck, label: `${kpis.repeatFounders}${labels.repeatFounders}`},
-    {icon: Rocket, label: `${kpis.numberCompaniesRaised}${labels.companiesRaised}`},
+    {icon: Rocket, label: `${kpis.numberCompaniesRaised}${labels.companiesUnit}${labels.companiesRaised}`},
     {icon: BarChart3, label: `${kpis.companiesTotalRaised}${labels.capitalRaised}`}
   ]
   return (

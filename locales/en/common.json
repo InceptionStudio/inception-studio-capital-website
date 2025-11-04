@@ -7,6 +7,9 @@
     "invest": "Invest with us"
   },
   "metrics": {
+    "foundersUnit": "",
+    "companiesUnit": "",
+    "yearsUnit": "+ years",
     "founders": " founders",
     "repeatFounders": " repeat founders",
     "companiesRaised": " companies raised",
