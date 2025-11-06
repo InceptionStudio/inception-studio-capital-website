@@ -152,9 +152,7 @@ export default async function Home({
 
             <Card className="max-w-4xl mx-auto">
               <div className="p-8">
-                <blockquote className="text-lg text-neutral-200 italic leading-relaxed mb-6">
-                  &ldquo;{opportunity.testimonial.quote}&rdquo;
-                </blockquote>
+                <blockquote className="text-lg text-neutral-200 italic leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: opportunity.testimonial.quote.replace(/\n/g, '<br/>') }} />
                 <div className="flex items-start gap-4">
                   <div className="relative h-12 w-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-white/10">
                     <Image
