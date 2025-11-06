@@ -20,6 +20,16 @@ export default function HubspotForm() {
         formId: FORM_ID,
         region: 'na2',
         target: '#hubspot-form',
+        onFormSubmit: function() {
+          // Track form submission in Google Analytics
+          if (typeof window !== 'undefined' && (window as any).gtag) {
+            (window as any).gtag('event', 'form_submit', {
+              event_category: 'engagement',
+              event_label: 'investor_application',
+              form_id: FORM_ID,
+            })
+          }
+        },
       })
     }
 

@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer'
 import { Container, PrimaryCTA, SecondaryCTA, Card, SectionTitle, StatsRow } from '@/components/Blocks'
+import ScheduleCallCTA from '@/components/ScheduleCallCTA'
 import Link from 'next/link'
 import Image from 'next/image'
 import kpis from '@/data/kpis.json' assert { type: 'json' }
@@ -102,13 +103,9 @@ export default async function Home({
                   <PrimaryCTA href={`${prefix}/invest`}>
                     {dict.common.cta.invest}
                   </PrimaryCTA>
-                  <SecondaryCTA
-                    href="https://meetings-na2.hubspot.com/inception/fund1-info"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <ScheduleCallCTA location="hero">
                     {dict.common.cta.schedule}
-                  </SecondaryCTA>
+                  </ScheduleCallCTA>
                   <SecondaryCTA href={`${prefix}/faq`}>
                     {dict.common.nav.faq}
                   </SecondaryCTA>
@@ -477,13 +474,9 @@ export default async function Home({
             </div>
             <div className="flex flex-wrap gap-3 justify-center md:justify-end">
               <PrimaryCTA href={`${prefix}/invest`}>{dict.common.cta.invest}</PrimaryCTA>
-              <SecondaryCTA
-                href="https://meetings-na2.hubspot.com/inception/fund1-info"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <ScheduleCallCTA location="footer">
                 {dict.common.cta.schedule}
-              </SecondaryCTA>
+              </ScheduleCallCTA>
             </div>
           </Container>
         </section>

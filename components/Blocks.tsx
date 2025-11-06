@@ -9,8 +9,8 @@ export function Container({ children, className='' }: {children:ReactNode, class
 export function PrimaryCTA({ href, children, target, rel }: {href:string, children:ReactNode, target?:string, rel?:string}){
   return <Link href={href} target={target} rel={rel} className="btn btn-primary">{children} <ArrowRight className="h-4 w-4"/></Link>
 }
-export function SecondaryCTA({ href, children, target, rel }: {href:string, children:ReactNode, target?:string, rel?:string}){
-  return <Link href={href} target={target} rel={rel} className="btn btn-secondary">{children}</Link>
+export function SecondaryCTA({ href, children, target, rel, onClick }: {href:string, children:ReactNode, target?:string, rel?:string, onClick?:()=>void}){
+  return <Link href={href} target={target} rel={rel} onClick={onClick} className="btn btn-secondary">{children}</Link>
 }
 export function Card({ children, className='' }: {children:ReactNode, className?:string}){
   return <div className={`card ${className}`}>{children}</div>

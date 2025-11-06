@@ -42,6 +42,7 @@ pnpm lint
 
 ## Environment Variables
 
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID` (optional) - Google Analytics Measurement ID (format: G-XXXXXXXXXX). If unset, analytics will not be tracked.
 - `FORWARD_WEBHOOK_URL` (optional) - Webhook URL to forward form submissions. If unset, API routes still return success but don't forward data.
 
 ## Styling
@@ -54,7 +55,7 @@ pnpm lint
 ## Deployment
 
 Designed for Vercel:
-- Set `FORWARD_WEBHOOK_URL` in Vercel Environment Variables
+- Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` and `FORWARD_WEBHOOK_URL` in Vercel Environment Variables
 - DNS for **inceptionstudio.capital** should point to Vercel
 - Zero build config needed (Next.js auto-detected)
 
