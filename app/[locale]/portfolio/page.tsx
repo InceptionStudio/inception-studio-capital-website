@@ -29,7 +29,7 @@ export default function Page({
     {name:'Octagon', blurb:'Copilot for financial analysts.', logo:'/logos/octagon.png', url:'https://www.octagonai.co/'},
     {name:'Sela', blurb:'AI voice sales agents that beat human performance.', logo:'/logos/sela.svg', url:'https://trysela.com/'},
     {name:'Lightning Rod', blurb:'Accurate predictive models with AI.', logo:'/logos/lightning-rod.png', url:'https://www.lightningrod.ai/'},
-    {name:'Skywalk', blurb:'Device-specific ML.', logo:'/logos/skywalk.png', url:'https://www.skywalk.ai/'},
+    {name:'Subtle', blurb:'Voice that works everywhere.', logo:'/logos/subtle.svg', url:'https://subtle.co/'},
     {name:'First Intelligence', blurb:'Perplexity for the real world. Multimodal AI that can see, understand, and generate. Available as CAPI AI.', logo:'/logos/first-intelligence.png', url:'https://first-intelligence.com'},
     {name:'Omi', blurb:'AI wearable “second brain” that turns conversations into insights and memory you can search, summarize, and share.', logo:'/logos/omi.png', url:'https://www.omi.me/'},
     {name:'GuestOS', blurb:'Voice AI for hospitality. 10 customers in production.', logo:'/logos/guestos.ico', url:'https://guestos.ai'},
