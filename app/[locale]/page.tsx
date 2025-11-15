@@ -445,7 +445,7 @@ export default async function Home({
                       <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
                         <div>
                           <div className="text-xs text-neutral-400">Funding</div>
-                          <div className="text-sm font-semibold text-white mt-1">$15M Series A</div>
+                          <div className="text-sm font-semibold text-white mt-1">$40M Series A</div>
                         </div>
                         <div>
                           <div className="text-xs text-neutral-400">Enterprise pilots</div>
